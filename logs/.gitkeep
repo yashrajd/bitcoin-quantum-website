@@ -1,0 +1,14 @@
+# Logs Directory
+
+This directory is reserved for server-side log files.
+
+For client-side logging, see browser DevTools Console.
+
+## Log Levels
+- DEBUG: Detailed debugging information
+- INFO: General operational information  
+- WARN: Warning messages
+- ERROR: Error messages
+
+## Configuration
+Edit `src/utils/logger.js` to configure log levels and storage options.
