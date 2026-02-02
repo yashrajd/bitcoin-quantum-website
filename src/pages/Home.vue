@@ -113,7 +113,7 @@ const updates = [
             <span class="highlight">Quantum Threat</span> to Bitcoin
           </h1>
           <p class="hero-description">
-            Quantum computing represents both an existential threat and an evolution opportunity 
+            Quantum computing represents both a potential existential threat and an evolution opportunity 
             for Bitcoin. Explore the risks, understand the solutions, and prepare for a 
             post-quantum future with our comprehensive, research-backed resources.
           </p>
