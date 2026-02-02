@@ -45,8 +45,7 @@ const navItems = [
   },
   { 
     label: 'BIP-360', 
-    path: '/bip-360',
-    featured: true
+    path: '/bip-360'
   },
   { 
     label: 'Resources', 
@@ -91,14 +90,14 @@ const closeMobileMenu = () => {
             v-for="item in navItems" 
             :key="item.path"
             class="nav-item"
-            :class="{ 'featured': item.featured }"
+
             role="none"
           >
             <router-link 
               :to="item.path"
               class="nav-link"
               role="menuitem"
-              :class="{ 'featured-link': item.featured }"
+
             >
               {{ item.label }}
             </router-link>
@@ -163,7 +162,7 @@ const closeMobileMenu = () => {
           <router-link 
             :to="item.path"
             class="mobile-nav-link"
-            :class="{ 'featured-link': item.featured }"
+  
             @click="closeMobileMenu"
           >
             {{ item.label }}
@@ -290,14 +289,7 @@ const closeMobileMenu = () => {
   background-color: var(--bg-tertiary);
 }
 
-.nav-link.featured-link {
-  color: var(--accent-primary);
-  border: 1px solid var(--accent-primary);
-}
 
-.nav-link.featured-link:hover {
-  background-color: rgba(0, 255, 136, 0.1);
-}
 
 /* Dropdown Menu */
 .dropdown {
@@ -411,9 +403,7 @@ const closeMobileMenu = () => {
   font-size: var(--text-lg);
 }
 
-.mobile-nav-link.featured-link {
-  color: var(--accent-primary);
-}
+
 
 .mobile-submenu {
   list-style: none;
