@@ -285,8 +285,8 @@ const closeMobileMenu = () => {
 
 .nav-link:hover,
 .nav-link.router-link-active {
-  color: var(--text-primary);
-  background-color: var(--bg-tertiary);
+  background-color: var(--bg-elevated);
+  color: var(--accent-primary);
 }
 
 
@@ -326,8 +326,8 @@ const closeMobileMenu = () => {
 }
 
 .dropdown-link:hover {
-  color: var(--text-primary);
-  background-color: var(--bg-tertiary);
+  background-color: var(--bg-elevated);
+  color: var(--accent-primary);
 }
 
 /* Actions */
@@ -396,14 +396,19 @@ const closeMobileMenu = () => {
 
 .mobile-nav-link {
   display: block;
-  padding: var(--space-3) 0;
+  padding: var(--space-3) var(--space-2);
   color: var(--text-primary);
   text-decoration: none;
   font-weight: 600;
   font-size: var(--text-lg);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-fast);
 }
 
-
+.mobile-nav-link:hover {
+  background-color: var(--bg-elevated);
+  color: var(--accent-primary);
+}
 
 .mobile-submenu {
   list-style: none;
@@ -413,10 +418,17 @@ const closeMobileMenu = () => {
 
 .mobile-submenu-link {
   display: block;
-  padding: var(--space-2) 0;
+  padding: var(--space-2);
   color: var(--text-secondary);
   text-decoration: none;
   font-size: var(--text-base);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-fast);
+}
+
+.mobile-submenu-link:hover {
+  background-color: var(--bg-elevated);
+  color: var(--accent-primary);
 }
 
 /* Mobile nav icon styling for GitHub link */
