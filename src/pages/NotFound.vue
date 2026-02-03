@@ -74,7 +74,7 @@ useHead({
 .error-message {
   color: var(--text-secondary);
   font-size: var(--text-lg);
-  max-width: 500px;
+  max-width: 480px;
   margin: 0 auto var(--space-8);
 }
 

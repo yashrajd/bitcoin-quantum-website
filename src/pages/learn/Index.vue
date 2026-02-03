@@ -86,7 +86,7 @@ const sections = [
 .lead {
   font-size: var(--text-xl);
   color: var(--text-secondary);
-  max-width: 700px;
+  max-width: 768px;
 }
 
 .sections-grid {

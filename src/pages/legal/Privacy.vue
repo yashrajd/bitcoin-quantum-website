@@ -47,7 +47,7 @@ useHead({
 
 <style scoped>
 .content-section {
-  max-width: 800px;
+  max-width: 768px;
 }
 
 .content-section h2 {

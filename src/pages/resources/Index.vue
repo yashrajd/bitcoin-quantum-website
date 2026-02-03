@@ -53,5 +53,5 @@ const resources = [
 .section-prompt { font-family: var(--font-family-mono); color: var(--accent-primary); font-size: var(--text-sm); margin-bottom: var(--space-2); display: block; }
 .lead { font-size: var(--text-xl); color: var(--text-secondary); }
 .resources-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
-@media (max-width: 900px) { .resources-grid { grid-template-columns: 1fr; } }
+@media (max-width: 1024px) { .resources-grid { grid-template-columns: 1fr; } }
 </style>

@@ -55,5 +55,5 @@ const breadcrumbs = [
 .contact-method p { color: var(--text-secondary); margin-bottom: var(--space-4); }
 .contact-link { color: var(--accent-primary); font-weight: 600; text-decoration: none; }
 .contact-link:hover { text-decoration: underline; }
-@media (max-width: 900px) { .contact-sections { grid-template-columns: 1fr; } }
+@media (max-width: 1024px) { .contact-sections { grid-template-columns: 1fr; } }
 </style>

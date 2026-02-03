@@ -88,7 +88,7 @@ const solutions = [
 .lead {
   font-size: var(--text-xl);
   color: var(--text-secondary);
-  max-width: 800px;
+  max-width: 768px;
 }
 
 .solutions-grid {
@@ -144,7 +144,7 @@ const solutions = [
   color: var(--accent-primary);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .solutions-grid {
     grid-template-columns: 1fr;
   }

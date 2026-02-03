@@ -87,7 +87,7 @@ const subtopics = [
 .lead {
   font-size: var(--text-lg);
   color: var(--text-secondary);
-  max-width: 800px;
+  max-width: 768px;
 }
 
 .subtopics-grid {
@@ -114,7 +114,7 @@ const subtopics = [
   color: var(--text-secondary);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .subtopics-grid {
     grid-template-columns: 1fr;
   }

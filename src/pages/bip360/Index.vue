@@ -183,7 +183,11 @@ const sections = [
   color: var(--text-muted);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .sections-grid {
+    grid-template-columns: 1fr;
+  }
+  
   .link-grid {
     grid-template-columns: 1fr;
   }

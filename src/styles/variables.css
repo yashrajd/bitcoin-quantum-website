@@ -77,6 +77,12 @@
   --border-radius: 6px;
   --border-radius-lg: 12px;
   
+  /* Breakpoints (for reference in media queries) */
+  --bp-sm: 480px;   /* Mobile */
+  --bp-md: 768px;   /* Tablet */
+  --bp-lg: 1024px;  /* Desktop */
+  --bp-xl: 1200px;  /* Large desktop */
+  
   /* Transitions */
   --transition-fast: 150ms ease;
   --transition-base: 250ms ease;

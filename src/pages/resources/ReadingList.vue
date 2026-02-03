@@ -52,5 +52,5 @@ const categories = [
 .breadcrumbs a { color: var(--accent-primary); text-decoration: none; }
 .lead { font-size: var(--text-lg); color: var(--text-secondary); margin-bottom: var(--space-10); }
 .reading-nav { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
-@media (max-width: 900px) { .reading-nav { grid-template-columns: 1fr; } }
+@media (max-width: 1024px) { .reading-nav { grid-template-columns: 1fr; } }
 </style>
