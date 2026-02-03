@@ -271,41 +271,6 @@ const updates = [
   flex-wrap: wrap;
 }
 
-/* Buttons */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  padding: var(--space-3) var(--space-6);
-  border-radius: var(--border-radius);
-  font-weight: 600;
-  text-decoration: none;
-  transition: all var(--transition-fast);
-}
-
-.btn-primary {
-  background-color: var(--accent-primary);
-  color: var(--bg-primary);
-}
-
-.btn-primary:hover {
-  background-color: var(--accent-primary);
-  filter: brightness(1.1);
-  box-shadow: var(--shadow-glow);
-  text-decoration: none;
-}
-
-.btn-secondary {
-  background-color: transparent;
-  color: var(--text-primary);
-  border: 1px solid var(--border-primary);
-}
-
-.btn-secondary:hover {
-  background-color: var(--bg-tertiary);
-  border-color: var(--border-secondary);
-  text-decoration: none;
-}
-
 /* Decorative Background */
 .hero-decoration {
   position: absolute;

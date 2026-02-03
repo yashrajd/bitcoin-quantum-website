@@ -144,24 +144,6 @@ const solutions = [
   color: var(--accent-primary);
 }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-3) var(--space-4);
-  background-color: var(--accent-primary);
-  color: var(--bg-primary);
-  border-radius: var(--border-radius);
-  font-weight: 600;
-  text-decoration: none;
-  transition: all var(--transition-fast);
-}
-
-.btn:hover {
-  filter: brightness(1.1);
-  text-decoration: none;
-}
-
 @media (max-width: 900px) {
   .solutions-grid {
     grid-template-columns: 1fr;

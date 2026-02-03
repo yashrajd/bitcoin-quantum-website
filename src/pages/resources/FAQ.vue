@@ -227,37 +227,6 @@ const toggleFaq = (index) => {
   flex-wrap: wrap;
 }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  padding: var(--space-3) var(--space-6);
-  border-radius: var(--border-radius);
-  font-weight: 600;
-  text-decoration: none;
-  transition: all var(--transition-fast);
-}
-
-.btn-primary {
-  background-color: var(--accent-primary);
-  color: var(--bg-primary);
-}
-
-.btn-primary:hover {
-  filter: brightness(1.1);
-  text-decoration: none;
-}
-
-.btn-secondary {
-  background-color: transparent;
-  color: var(--text-primary);
-  border: 1px solid var(--border-primary);
-}
-
-.btn-secondary:hover {
-  background-color: var(--bg-tertiary);
-  text-decoration: none;
-}
-
 @media (max-width: 640px) {
   .faq-question {
     flex-wrap: wrap;
