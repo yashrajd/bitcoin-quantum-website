@@ -71,9 +71,8 @@ defineProps({
 }
 
 .pathway-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--border-secondary);
+  transform: translateY(-4px);
+  border-color: var(--accent-primary);
 }
 
 .pathway-card:focus-visible {

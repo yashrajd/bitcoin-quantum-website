@@ -16,10 +16,8 @@ defineProps({
 
 <template>
   <div class="content-card">
-    <div class="card-header">
-      <span class="card-icon">{{ icon }}</span>
-      <h3 class="card-title">{{ title }}</h3>
-    </div>
+    <span class="card-icon">{{ icon }}</span>
+    <h3 class="card-title">{{ title }}</h3>
     <p class="card-description">{{ description }}</p>
     <ul class="topic-list">
       <li v-for="topic in topics" :key="topic" class="topic-item">
@@ -36,32 +34,30 @@ defineProps({
 
 <style scoped>
 .content-card {
+  display: flex;
+  flex-direction: column;
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-primary);
   border-radius: var(--border-radius-lg);
   padding: var(--space-6);
   transition: all var(--transition-base);
+  height: 100%;
 }
 
 .content-card:hover {
-  border-color: var(--border-secondary);
-  transform: translateY(-2px);
-}
-
-.card-header {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  margin-bottom: var(--space-4);
+  border-color: var(--accent-primary);
+  transform: translateY(-4px);
 }
 
 .card-icon {
-  font-size: var(--text-2xl);
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-4);
 }
 
 .card-title {
   font-size: var(--text-xl);
-  margin: 0;
+  margin-bottom: var(--space-3);
+  color: var(--text-primary);
 }
 
 .card-description {

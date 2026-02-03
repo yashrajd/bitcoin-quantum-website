@@ -13,7 +13,6 @@
  * - layout: String - "grid" or "list" (default: "grid")
  * - number: String - Optional number badge (for sequential layouts)
  * - badge: String - Optional status/category badge
- * - featured: Boolean - Whether this is a featured card
  */
 
 <script setup>
@@ -50,10 +49,6 @@ defineProps({
   badge: {
     type: String,
     default: ''
-  },
-  featured: {
-    type: Boolean,
-    default: false
   }
 })
 </script>
@@ -64,8 +59,7 @@ defineProps({
     class="navigation-card"
     :class="{ 
       'layout-grid': layout === 'grid',
-      'layout-list': layout === 'list',
-      'featured': featured
+      'layout-list': layout === 'list'
     }"
   >
     <!-- Number badge for sequential layouts -->
@@ -113,7 +107,6 @@ defineProps({
 .navigation-card.layout-grid:hover {
   border-color: var(--accent-primary);
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
   text-decoration: none;
 }
 
@@ -128,16 +121,6 @@ defineProps({
   border-color: var(--accent-primary);
   transform: translateX(8px);
   text-decoration: none;
-}
-
-/* Featured variant */
-.navigation-card.featured {
-  background: linear-gradient(135deg, var(--bg-secondary), rgba(0, 255, 136, 0.05));
-  border-color: var(--accent-primary);
-}
-
-.navigation-card.featured:hover {
-  box-shadow: var(--shadow-glow);
 }
 
 /* Number Badge (for sequential list layouts) */

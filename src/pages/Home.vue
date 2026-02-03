@@ -72,7 +72,7 @@ const pathways = [
 
 // Key statistics
 const stats = [
-  { value: '~1.8M', label: 'BTC in vulnerable addresses', highlight: true },
+  { value: '~1.8M', label: 'BTC in vulnerable addresses', highlight: false },
   { value: '2031', label: 'UK NCSC migration deadline', highlight: false },
   { value: '3', label: 'NIST standardized algorithms', highlight: false }
 ]
@@ -341,9 +341,8 @@ const updates = [
 }
 
 .stat-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--border-secondary);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  border-color: var(--accent-primary);
 }
 
 .stat-card:focus-visible {
