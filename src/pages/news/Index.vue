@@ -30,7 +30,9 @@ const news = [
 
 <template>
   <PageContainer>
-    <h1>News & Updates</h1>
+    <div class="page-header">
+      <span class="terminal-prompt section-prompt">/news</span>
+      <h1>News & Updates</h1>
     <p class="lead">Latest developments in quantum computing and Bitcoin security.</p>
     
     <div class="news-list">
@@ -46,6 +48,8 @@ const news = [
 </template>
 
 <style scoped>
+.page-header { margin-bottom: var(--space-10); }
+.section-prompt { font-family: var(--font-family-mono); color: var(--accent-primary); font-size: var(--text-sm); margin-bottom: var(--space-2); display: block; }
 .lead { font-size: var(--text-lg); color: var(--text-secondary); margin-bottom: var(--space-10); }
 .news-list { display: flex; flex-direction: column; gap: var(--space-6); }
 .news-item {
