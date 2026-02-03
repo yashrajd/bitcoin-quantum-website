@@ -5,6 +5,7 @@
 <script setup>
 import { useHead } from '@vueuse/head'
 import PageContainer from '../../components/PageContainer.vue'
+import NavigationCard from '../../components/NavigationCard.vue'
 
 useHead({
   title: 'BIP-360 Hub - Bitcoin Quantum Hub',
@@ -17,31 +18,31 @@ useHead({
 const sections = [
   {
     title: 'Overview',
-    path: '/bip-360/overview',
+    link: '/bip-360/overview',
     icon: '📖',
     description: 'What BIP-360 is, who authored it, and why it matters for Bitcoin\'s future.'
   },
   {
     title: 'Technical Deep Dive',
-    path: '/bip-360/technical',
+    link: '/bip-360/technical',
     icon: '🔧',
     description: 'P2TSH output types, quantum witness structures, and implementation details.'
   },
   {
     title: 'Implementation Status',
-    path: '/bip-360/status',
+    link: '/bip-360/status',
     icon: '📊',
     description: 'Current status, development milestones, and roadmap for BIP-360.'
   },
   {
     title: 'User Guide',
-    path: '/bip-360/user-guide',
+    link: '/bip-360/user-guide',
     icon: '👤',
     description: 'What Bitcoin users need to know about migration and wallet compatibility.'
   },
   {
     title: 'Developer Resources',
-    path: '/bip-360/developers',
+    link: '/bip-360/developers',
     icon: '💻',
     description: 'Technical specifications, reference implementations, and contribution guidelines.'
   }
@@ -66,16 +67,11 @@ const sections = [
     </div>
     
     <div class="sections-grid">
-      <router-link
+      <NavigationCard
         v-for="section in sections"
-        :key="section.path"
-        :to="section.path"
-        class="section-card"
-      >
-        <span class="section-icon">{{ section.icon }}</span>
-        <h3>{{ section.title }}</h3>
-        <p>{{ section.description }}</p>
-      </router-link>
+        :key="section.link"
+        v-bind="section"
+      />
     </div>
     
     <div class="external-links">
@@ -148,40 +144,6 @@ const sections = [
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--space-4);
   margin-bottom: var(--space-10);
-}
-
-.section-card {
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-primary);
-  border-radius: var(--border-radius-lg);
-  padding: var(--space-6);
-  text-decoration: none;
-  color: inherit;
-  transition: all var(--transition-base);
-}
-
-.section-card:hover {
-  border-color: var(--accent-primary);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-glow);
-  text-decoration: none;
-}
-
-.section-icon {
-  font-size: var(--text-2xl);
-  display: block;
-  margin-bottom: var(--space-3);
-}
-
-.section-card h3 {
-  color: var(--text-primary);
-  margin-bottom: var(--space-2);
-}
-
-.section-card p {
-  color: var(--text-secondary);
-  margin: 0;
-  font-size: var(--text-sm);
 }
 
 .external-links {

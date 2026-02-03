@@ -7,6 +7,7 @@
 <script setup>
 import { useHead } from '@vueuse/head'
 import PageContainer from '../../components/PageContainer.vue'
+import NavigationCard from '../../components/NavigationCard.vue'
 
 useHead({
   title: 'Quantum Computing 101 - Bitcoin Quantum Hub',
@@ -19,19 +20,19 @@ useHead({
 const subtopics = [
   {
     title: 'History & Origins',
-    path: '/learn/quantum-computing-101/history',
+    link: '/learn/quantum-computing-101/history',
     description: 'From Feynman\'s 1980s proposals to Shor\'s algorithm and today\'s quantum computers.',
     icon: '📜'
   },
   {
     title: 'Glossary of Terms',
-    path: '/learn/quantum-computing-101/glossary',
+    link: '/learn/quantum-computing-101/glossary',
     description: 'Key concepts explained: qubits, superposition, entanglement, and quantum algorithms.',
     icon: '📖'
   },
   {
     title: 'Recent Developments',
-    path: '/learn/quantum-computing-101/recent-developments',
+    link: '/learn/quantum-computing-101/recent-developments',
     description: 'Latest breakthroughs in quantum computing research and government initiatives.',
     icon: '📰'
   }
@@ -56,17 +57,12 @@ const subtopics = [
     </div>
     
     <div class="subtopics-grid">
-      <router-link
+      <NavigationCard
         v-for="topic in subtopics"
-        :key="topic.path"
-        :to="topic.path"
-        class="subtopic-card"
-      >
-        <span class="subtopic-icon">{{ topic.icon }}</span>
-        <h3>{{ topic.title }}</h3>
-        <p>{{ topic.description }}</p>
-        <span class="read-more">Read more →</span>
-      </router-link>
+        :key="topic.link"
+        v-bind="topic"
+        link-text="Read more →"
+      />
     </div>
     
     <div class="callout">
@@ -117,44 +113,6 @@ const subtopics = [
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-6);
   margin-bottom: var(--space-10);
-}
-
-.subtopic-card {
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-primary);
-  border-radius: var(--border-radius-lg);
-  padding: var(--space-6);
-  text-decoration: none;
-  color: inherit;
-  transition: all var(--transition-base);
-}
-
-.subtopic-card:hover {
-  border-color: var(--accent-primary);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-glow);
-  text-decoration: none;
-}
-
-.subtopic-icon {
-  font-size: var(--text-3xl);
-  display: block;
-  margin-bottom: var(--space-4);
-}
-
-.subtopic-card h3 {
-  color: var(--text-primary);
-  margin-bottom: var(--space-3);
-}
-
-.subtopic-card p {
-  color: var(--text-secondary);
-  margin-bottom: var(--space-4);
-}
-
-.read-more {
-  color: var(--accent-primary);
-  font-weight: 600;
 }
 
 .callout {
