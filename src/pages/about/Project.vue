@@ -1,14 +1,23 @@
 <script setup>
 import { useHead } from '@vueuse/head'
 import PageContainer from '../../components/PageContainer.vue'
+import Breadcrumbs from '../../components/Breadcrumbs.vue'
+
 useHead({
   title: 'About This Project - Bitcoin Quantum Hub',
   meta: [{ name: 'description', content: 'Mission, editorial standards, and methodology of the Bitcoin Quantum Hub.' }]
 })
+
+const breadcrumbs = [
+  { label: 'About', path: '/about' },
+  { label: 'Project' }
+]
 </script>
 
 <template>
   <PageContainer>
+    <Breadcrumbs :items="breadcrumbs" />
+
     <div class="page-header">
       <span class="terminal-prompt section-prompt">/about</span>
       <h1>About This Project</h1>

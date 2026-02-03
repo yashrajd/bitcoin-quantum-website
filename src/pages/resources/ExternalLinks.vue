@@ -7,6 +7,11 @@ useHead({
   meta: [{ name: 'description', content: 'Additional resources and community links.' }]
 })
 
+const breadcrumbs = [
+  { label: 'Resources', path: '/resources' },
+  { label: 'External Links' }
+]
+
 const links = [
   { category: 'Community', items: [
     { name: 'Bitcoin-Dev Mailing List', url: 'https://lists.linuxfoundation.org/mailman/listinfo/bitcoin-dev', desc: 'Technical discussions among Bitcoin developers' },

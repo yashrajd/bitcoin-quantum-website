@@ -16,6 +16,11 @@ useHead({
   }]
 })
 
+const breadcrumbs = [
+  { label: 'Solutions', path: '/solutions' },
+  { label: 'Bitcoin Proposals' }
+]
+
 const proposals = [
   {
     title: 'BIP-360: Pay to Quantum Resistant Hash',

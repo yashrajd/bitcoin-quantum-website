@@ -7,6 +7,12 @@ useHead({
   meta: [{ name: 'description', content: 'Peer-reviewed research on quantum computing and blockchain security.' }]
 })
 
+const breadcrumbs = [
+  { label: 'Resources', path: '/resources' },
+  { label: 'Reading List', path: '/resources/reading-list' },
+  { label: 'Academic Papers' }
+]
+
 const papers = [
   {
     title: 'Navigating the quantum computing threat landscape for blockchains: A comprehensive survey',

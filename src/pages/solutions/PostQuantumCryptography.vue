@@ -16,6 +16,11 @@ useHead({
   }]
 })
 
+const breadcrumbs = [
+  { label: 'Solutions', path: '/solutions' },
+  { label: 'Post-Quantum Cryptography' }
+]
+
 const approaches = [
   {
     title: 'Hash-Based Signatures',

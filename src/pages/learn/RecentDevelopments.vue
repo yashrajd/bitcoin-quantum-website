@@ -11,6 +11,12 @@ useHead({
   }]
 })
 
+const breadcrumbs = [
+  { label: 'Learn', path: '/learn' },
+  { label: 'Quantum Computing 101', path: '/learn/quantum-computing-101' },
+  { label: 'Recent Developments' }
+]
+
 const developments = [
   {
     category: 'Standardization',

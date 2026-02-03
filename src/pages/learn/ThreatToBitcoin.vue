@@ -48,12 +48,8 @@ const topics = [
 
 <template>
   <PageContainer>
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <router-link to="/learn">Learn</router-link>
-      <span>/</span>
-      <span class="current">The Threat to Bitcoin</span>
-    </nav>
-    
+    <Breadcrumbs :items="breadcrumbs" />
+
     <h1>The Threat to Bitcoin</h1>
     <p class="lead">
       Bitcoin's security model relies on cryptographic algorithms that quantum computers 

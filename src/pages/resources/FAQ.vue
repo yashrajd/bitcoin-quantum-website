@@ -16,6 +16,11 @@ useHead({
   }]
 })
 
+const breadcrumbs = [
+  { label: 'Resources', path: '/resources' },
+  { label: 'FAQ' }
+]
+
 const faqs = [
   {
     question: 'Is Bitcoin currently vulnerable to quantum attacks?',

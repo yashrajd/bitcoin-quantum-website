@@ -9,6 +9,11 @@ useHead({
   meta: [{ name: 'description', content: 'Practical guidance for transitioning to quantum-resistant Bitcoin addresses.' }]
 })
 
+const breadcrumbs = [
+  { label: 'Solutions', path: '/solutions' },
+  { label: 'Migration' }
+]
+
 const sections = [
   {
     title: 'For Individuals',

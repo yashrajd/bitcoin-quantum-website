@@ -12,6 +12,11 @@ useHead({
   }]
 })
 
+const breadcrumbs = [
+  { label: 'Learn', path: '/learn' },
+  { label: 'Timeline' }
+]
+
 const sections = [
   {
     title: 'Expert Perspectives',

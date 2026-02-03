@@ -7,6 +7,12 @@ useHead({
   meta: [{ name: 'description', content: 'BIPs, Bitcoin Wiki articles, and developer resources.' }]
 })
 
+const breadcrumbs = [
+  { label: 'Resources', path: '/resources' },
+  { label: 'Reading List', path: '/resources/reading-list' },
+  { label: 'Technical Documentation' }
+]
+
 const docs = [
   {
     title: 'BIP-360: Pay to Quantum Resistant Hash',

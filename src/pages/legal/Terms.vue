@@ -5,6 +5,7 @@
 <script setup>
 import { useHead } from '@vueuse/head'
 import PageContainer from '../../components/PageContainer.vue'
+import Breadcrumbs from '../../components/Breadcrumbs.vue'
 
 useHead({
   title: 'Terms of Use - Bitcoin Quantum Hub',
@@ -13,10 +14,17 @@ useHead({
     content: 'Terms of use for the Bitcoin Quantum Hub website.'
   }]
 })
+
+const breadcrumbs = [
+  { label: 'Legal', path: '/legal' },
+  { label: 'Terms of Use' }
+]
 </script>
 
 <template>
   <PageContainer>
+    <Breadcrumbs :items="breadcrumbs" />
+
     <h1>Terms of Use</h1>
     
     <div class="content-section">

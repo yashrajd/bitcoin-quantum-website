@@ -7,6 +7,12 @@ useHead({
   meta: [{ name: 'description', content: 'Expert predictions and academic estimates on quantum threats to Bitcoin.' }]
 })
 
+const breadcrumbs = [
+  { label: 'Learn', path: '/learn' },
+  { label: 'Timeline', path: '/learn/timeline' },
+  { label: 'Expert Perspectives' }
+]
+
 const perspectives = [
   {
     source: 'Academic Research',

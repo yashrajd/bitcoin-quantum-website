@@ -7,6 +7,12 @@ useHead({
   meta: [{ name: 'description', content: 'Official government timelines for quantum threat preparation.' }]
 })
 
+const breadcrumbs = [
+  { label: 'Learn', path: '/learn' },
+  { label: 'Timeline', path: '/learn/timeline' },
+  { label: 'Government Deadlines' }
+]
+
 const deadlines = [
   {
     agency: 'UK NCSC',

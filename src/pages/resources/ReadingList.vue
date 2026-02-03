@@ -9,6 +9,11 @@ useHead({
   meta: [{ name: 'description', content: 'Academic papers, government publications, and technical documentation.' }]
 })
 
+const breadcrumbs = [
+  { label: 'Resources', path: '/resources' },
+  { label: 'Reading List' }
+]
+
 const categories = [
   {
     title: 'Academic Papers',

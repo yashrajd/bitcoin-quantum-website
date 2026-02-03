@@ -7,6 +7,12 @@ useHead({
   meta: [{ name: 'description', content: 'Official guidance from NIST, CISA, NSA, and other agencies.' }]
 })
 
+const breadcrumbs = [
+  { label: 'Resources', path: '/resources' },
+  { label: 'Reading List', path: '/resources/reading-list' },
+  { label: 'Government Publications' }
+]
+
 const publications = [
   {
     title: 'Guidance on Planning for Post-Quantum Cryptography',
