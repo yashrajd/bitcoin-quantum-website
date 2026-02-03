@@ -1,6 +1,7 @@
 <script setup>
 import { useHead } from '@vueuse/head'
 import PageContainer from '../../components/PageContainer.vue'
+import Breadcrumbs from '../../components/Breadcrumbs.vue'
 
 useHead({
   title: 'How Bitcoin\'s Cryptography Works - Bitcoin Quantum Hub',
@@ -9,17 +10,18 @@ useHead({
     content: 'Technical explanation of Bitcoin\'s cryptographic foundations including ECDSA and Schnorr signatures.'
   }]
 })
+
+
+const breadcrumbs = [
+  { label: 'Learn', path: '/learn' },
+  { label: 'The Threat to Bitcoin', path: '/learn/threat-to-bitcoin' },
+  { label: 'Bitcoin Cryptography' }
+]
 </script>
 
 <template>
   <PageContainer>
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <router-link to="/learn">Learn</router-link>
-      <span>/</span>
-      <router-link to="/learn/threat-to-bitcoin">The Threat to Bitcoin</router-link>
-      <span>/</span>
-      <span class="current">Bitcoin Cryptography</span>
-    </nav>
+    <Breadcrumbs :items="breadcrumbs" />
     
     <h1>How Bitcoin's Cryptography Works</h1>
     
@@ -51,18 +53,6 @@ useHead({
 </template>
 
 <style scoped>
-.breadcrumbs {
-  font-family: var(--font-family-mono);
-  font-size: var(--text-sm);
-  color: var(--text-muted);
-  margin-bottom: var(--space-6);
-}
-
-.breadcrumbs a {
-  color: var(--accent-primary);
-  text-decoration: none;
-}
-
 .content h2 {
   color: var(--accent-primary);
   margin-top: var(--space-8);

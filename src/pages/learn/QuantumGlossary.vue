@@ -7,6 +7,7 @@
 <script setup>
 import { useHead } from '@vueuse/head'
 import PageContainer from '../../components/PageContainer.vue'
+import Breadcrumbs from '../../components/Breadcrumbs.vue'
 
 useHead({
   title: 'Quantum Computing Glossary - Bitcoin Quantum Hub',
@@ -46,13 +47,7 @@ const glossaryTerms = [
 
 <template>
   <PageContainer>
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <router-link to="/learn">Learn</router-link>
-      <span>/</span>
-      <router-link to="/learn/quantum-computing-101">Quantum Computing 101</router-link>
-      <span>/</span>
-      <span class="current">Glossary</span>
-    </nav>
+    <Breadcrumbs :items="breadcrumbs" />
     
     <h1>Glossary of Quantum Concepts</h1>
     <p class="lead">
@@ -83,18 +78,6 @@ const glossaryTerms = [
 </template>
 
 <style scoped>
-.breadcrumbs {
-  font-family: var(--font-family-mono);
-  font-size: var(--text-sm);
-  color: var(--text-muted);
-  margin-bottom: var(--space-6);
-}
-
-.breadcrumbs a {
-  color: var(--accent-primary);
-  text-decoration: none;
-}
-
 .breadcrumbs span {
   margin: 0 var(--space-2);
 }

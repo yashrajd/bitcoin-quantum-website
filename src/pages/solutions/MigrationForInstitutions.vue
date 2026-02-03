@@ -1,21 +1,23 @@
 <script setup>
 import { useHead } from '@vueuse/head'
 import PageContainer from '../../components/PageContainer.vue'
+import Breadcrumbs from '../../components/Breadcrumbs.vue'
 useHead({
   title: 'Migration for Institutions - Bitcoin Quantum Hub',
   meta: [{ name: 'description', content: 'Strategic planning for institutional Bitcoin custody and quantum resistance.' }]
 })
+
+
+const breadcrumbs = [
+  { label: 'Solutions', path: '/solutions' },
+  { label: 'Migration Pathways', path: '/solutions/migration' },
+  { label: 'For Institutions' }
+]
 </script>
 
 <template>
   <PageContainer>
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <router-link to="/solutions">Solutions</router-link>
-      <span>/</span>
-      <router-link to="/solutions/migration">Migration Pathways</router-link>
-      <span>/</span>
-      <span class="current">For Institutions</span>
-    </nav>
+    <Breadcrumbs :items="breadcrumbs" />
     
     <h1>Migration Guide for Institutions</h1>
     
@@ -38,7 +40,6 @@ useHead({
 </template>
 
 <style scoped>
-.breadcrumbs { font-family: var(--font-family-mono); font-size: var(--text-sm); color: var(--text-muted); margin-bottom: var(--space-6); }
 .breadcrumbs a { color: var(--accent-primary); text-decoration: none; }
 h2 { color: var(--accent-primary); margin-top: var(--space-8); margin-bottom: var(--space-4); }
 p, ul { color: var(--text-secondary); line-height: 1.8; }

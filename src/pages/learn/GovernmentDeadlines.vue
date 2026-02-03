@@ -1,6 +1,7 @@
 <script setup>
 import { useHead } from '@vueuse/head'
 import PageContainer from '../../components/PageContainer.vue'
+import Breadcrumbs from '../../components/Breadcrumbs.vue'
 useHead({
   title: 'Government Deadlines - Bitcoin Quantum Hub',
   meta: [{ name: 'description', content: 'Official government timelines for quantum threat preparation.' }]
@@ -36,13 +37,7 @@ const deadlines = [
 
 <template>
   <PageContainer>
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <router-link to="/learn">Learn</router-link>
-      <span>/</span>
-      <router-link to="/learn/timeline">Timeline</router-link>
-      <span>/</span>
-      <span class="current">Government Deadlines</span>
-    </nav>
+    <Breadcrumbs :items="breadcrumbs" />
     
     <h1>Government Deadlines</h1>
     <p class="lead">Government agencies worldwide are establishing concrete timelines for the transition to quantum-resistant cryptography.</p>
@@ -74,7 +69,6 @@ const deadlines = [
 </template>
 
 <style scoped>
-.breadcrumbs { font-family: var(--font-family-mono); font-size: var(--text-sm); color: var(--text-muted); margin-bottom: var(--space-6); }
 .breadcrumbs a { color: var(--accent-primary); text-decoration: none; }
 .lead { font-size: var(--text-lg); color: var(--text-secondary); margin-bottom: var(--space-10); }
 .deadlines-table {

@@ -1,6 +1,7 @@
 <script setup>
 import { useHead } from '@vueuse/head'
 import PageContainer from '../../components/PageContainer.vue'
+import Breadcrumbs from '../../components/Breadcrumbs.vue'
 useHead({
   title: 'Academic Papers - Bitcoin Quantum Hub',
   meta: [{ name: 'description', content: 'Peer-reviewed research on quantum computing and blockchain security.' }]
@@ -24,13 +25,7 @@ const papers = [
 
 <template>
   <PageContainer>
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <router-link to="/resources">Resources</router-link>
-      <span>/</span>
-      <router-link to="/resources/reading-list">Reading List</router-link>
-      <span>/</span>
-      <span class="current">Academic</span>
-    </nav>
+    <Breadcrumbs :items="breadcrumbs" />
     
     <h1>Academic Papers</h1>
     
@@ -48,7 +43,6 @@ const papers = [
 </template>
 
 <style scoped>
-.breadcrumbs { font-family: var(--font-family-mono); font-size: var(--text-sm); color: var(--text-muted); margin-bottom: var(--space-6); }
 .breadcrumbs a { color: var(--accent-primary); text-decoration: none; }
 .papers-list { display: flex; flex-direction: column; gap: var(--space-4); }
 .paper-card {

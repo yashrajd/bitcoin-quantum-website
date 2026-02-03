@@ -1,19 +1,22 @@
 <script setup>
 import { useHead } from '@vueuse/head'
 import PageContainer from '../../components/PageContainer.vue'
+import Breadcrumbs from '../../components/Breadcrumbs.vue'
 useHead({
   title: 'BIP-360 Implementation Status - Bitcoin Quantum Hub',
   meta: [{ name: 'description', content: 'Current development status and roadmap for BIP-360.' }]
 })
+
+
+const breadcrumbs = [
+  { label: 'BIP-360 Hub', path: '/bip-360' },
+  { label: 'Implementation Status' }
+]
 </script>
 
 <template>
   <PageContainer>
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <router-link to="/bip-360">BIP-360 Hub</router-link>
-      <span>/</span>
-      <span class="current">Status</span>
-    </nav>
+    <Breadcrumbs :items="breadcrumbs" />
     
     <h1>BIP-360 Implementation Status</h1>
     
@@ -45,7 +48,6 @@ useHead({
 </template>
 
 <style scoped>
-.breadcrumbs { font-family: var(--font-family-mono); font-size: var(--text-sm); color: var(--text-muted); margin-bottom: var(--space-6); }
 .breadcrumbs a { color: var(--accent-primary); text-decoration: none; }
 .status-banner {
   background: linear-gradient(135deg, rgba(255, 183, 3, 0.1), rgba(255, 183, 3, 0.05));

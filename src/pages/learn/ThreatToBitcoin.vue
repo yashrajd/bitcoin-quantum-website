@@ -6,6 +6,7 @@
 import { useHead } from '@vueuse/head'
 import PageContainer from '../../components/PageContainer.vue'
 import NavigationCard from '../../components/NavigationCard.vue'
+import Breadcrumbs from '../../components/Breadcrumbs.vue'
 
 useHead({
   title: 'The Threat to Bitcoin - Bitcoin Quantum Hub',
@@ -14,6 +15,11 @@ useHead({
     content: 'Understanding how quantum computing threatens Bitcoin\'s cryptographic security.'
   }]
 })
+
+const breadcrumbs = [
+  { label: 'Learn', path: '/learn' },
+  { label: 'The Threat to Bitcoin' }
+]
 
 const topics = [
   {
@@ -67,18 +73,6 @@ const topics = [
 </template>
 
 <style scoped>
-.breadcrumbs {
-  font-family: var(--font-family-mono);
-  font-size: var(--text-sm);
-  color: var(--text-muted);
-  margin-bottom: var(--space-6);
-}
-
-.breadcrumbs a {
-  color: var(--accent-primary);
-  text-decoration: none;
-}
-
 .lead {
   font-size: var(--text-lg);
   color: var(--text-secondary);

@@ -1,6 +1,7 @@
 <script setup>
 import { useHead } from '@vueuse/head'
 import PageContainer from '../../components/PageContainer.vue'
+import Breadcrumbs from '../../components/Breadcrumbs.vue'
 useHead({
   title: 'Technical Documentation - Bitcoin Quantum Hub',
   meta: [{ name: 'description', content: 'BIPs, Bitcoin Wiki articles, and developer resources.' }]
@@ -30,13 +31,7 @@ const docs = [
 
 <template>
   <PageContainer>
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <router-link to="/resources">Resources</router-link>
-      <span>/</span>
-      <router-link to="/resources/reading-list">Reading List</router-link>
-      <span>/</span>
-      <span class="current">Technical</span>
-    </nav>
+    <Breadcrumbs :items="breadcrumbs" />
     
     <h1>Technical Documentation</h1>
     
@@ -54,7 +49,6 @@ const docs = [
 </template>
 
 <style scoped>
-.breadcrumbs { font-family: var(--font-family-mono); font-size: var(--text-sm); color: var(--text-muted); margin-bottom: var(--space-6); }
 .breadcrumbs a { color: var(--accent-primary); text-decoration: none; }
 .docs-list { display: flex; flex-direction: column; gap: var(--space-4); }
 .doc-card {

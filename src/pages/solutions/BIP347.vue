@@ -1,21 +1,23 @@
 <script setup>
 import { useHead } from '@vueuse/head'
 import PageContainer from '../../components/PageContainer.vue'
+import Breadcrumbs from '../../components/Breadcrumbs.vue'
 useHead({
   title: 'BIP-347 / OP_CAT - Bitcoin Quantum Hub',
   meta: [{ name: 'description', content: 'How OP_CAT enables quantum-resistant Lamport signatures.' }]
 })
+
+
+const breadcrumbs = [
+  { label: 'Solutions', path: '/solutions' },
+  { label: 'Bitcoin Proposals', path: '/solutions/bitcoin-proposals' },
+  { label: 'BIP-347' }
+]
 </script>
 
 <template>
   <PageContainer>
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <router-link to="/solutions">Solutions</router-link>
-      <span>/</span>
-      <router-link to="/solutions/bitcoin-proposals">Bitcoin Proposals</router-link>
-      <span>/</span>
-      <span class="current">BIP-347</span>
-    </nav>
+    <Breadcrumbs :items="breadcrumbs" />
     
     <h1>BIP-347: OP_CAT for Lamport Signatures</h1>
     
@@ -33,7 +35,6 @@ useHead({
 </template>
 
 <style scoped>
-.breadcrumbs { font-family: var(--font-family-mono); font-size: var(--text-sm); color: var(--text-muted); margin-bottom: var(--space-6); }
 .breadcrumbs a { color: var(--accent-primary); text-decoration: none; }
 h2 { color: var(--accent-primary); margin-top: var(--space-8); margin-bottom: var(--space-4); }
 p { color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-4); }

@@ -1,21 +1,23 @@
 <script setup>
 import { useHead } from '@vueuse/head'
 import PageContainer from '../../components/PageContainer.vue'
+import Breadcrumbs from '../../components/Breadcrumbs.vue'
 useHead({
   title: 'BIP-360 Brief - Bitcoin Quantum Hub',
   meta: [{ name: 'description', content: 'Summary of Bitcoin Improvement Proposal 360 for quantum resistance.' }]
 })
+
+
+const breadcrumbs = [
+  { label: 'Solutions', path: '/solutions' },
+  { label: 'Bitcoin Proposals', path: '/solutions/bitcoin-proposals' },
+  { label: 'BIP-360' }
+]
 </script>
 
 <template>
   <PageContainer>
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <router-link to="/solutions">Solutions</router-link>
-      <span>/</span>
-      <router-link to="/solutions/bitcoin-proposals">Bitcoin Proposals</router-link>
-      <span>/</span>
-      <span class="current">BIP-360</span>
-    </nav>
+    <Breadcrumbs :items="breadcrumbs" />
     
     <h1>BIP-360 Overview</h1>
     
@@ -34,7 +36,6 @@ useHead({
 </template>
 
 <style scoped>
-.breadcrumbs { font-family: var(--font-family-mono); font-size: var(--text-sm); color: var(--text-muted); margin-bottom: var(--space-6); }
 .breadcrumbs a { color: var(--accent-primary); text-decoration: none; }
 .lead { font-size: var(--text-lg); color: var(--text-secondary); margin-bottom: var(--space-8); }
 h2 { color: var(--accent-primary); margin-top: var(--space-8); margin-bottom: var(--space-4); }

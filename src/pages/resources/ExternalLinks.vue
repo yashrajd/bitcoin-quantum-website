@@ -1,6 +1,7 @@
 <script setup>
 import { useHead } from '@vueuse/head'
 import PageContainer from '../../components/PageContainer.vue'
+import Breadcrumbs from '../../components/Breadcrumbs.vue'
 useHead({
   title: 'External Links - Bitcoin Quantum Hub',
   meta: [{ name: 'description', content: 'Additional resources and community links.' }]
@@ -20,11 +21,7 @@ const links = [
 
 <template>
   <PageContainer>
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <router-link to="/resources">Resources</router-link>
-      <span>/</span>
-      <span class="current">External Links</span>
-    </nav>
+    <Breadcrumbs :items="breadcrumbs" />
     
     <h1>External Links</h1>
     
@@ -41,7 +38,6 @@ const links = [
 </template>
 
 <style scoped>
-.breadcrumbs { font-family: var(--font-family-mono); font-size: var(--text-sm); color: var(--text-muted); margin-bottom: var(--space-6); }
 .breadcrumbs a { color: var(--accent-primary); text-decoration: none; }
 .link-section { margin-bottom: var(--space-8); }
 .link-section h2 { color: var(--accent-primary); margin-bottom: var(--space-4); }

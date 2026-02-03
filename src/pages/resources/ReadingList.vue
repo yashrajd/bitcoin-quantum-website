@@ -1,6 +1,7 @@
 <script setup>
 import { useHead } from '@vueuse/head'
 import PageContainer from '../../components/PageContainer.vue'
+import Breadcrumbs from '../../components/Breadcrumbs.vue'
 import NavigationCard from '../../components/NavigationCard.vue'
 
 useHead({
@@ -32,11 +33,7 @@ const categories = [
 
 <template>
   <PageContainer>
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <router-link to="/resources">Resources</router-link>
-      <span>/</span>
-      <span class="current">Reading List</span>
-    </nav>
+    <Breadcrumbs :items="breadcrumbs" />
     
     <h1>Reading List</h1>
     <p class="lead">Curated resources organized by category for deeper learning.</p>
@@ -52,7 +49,6 @@ const categories = [
 </template>
 
 <style scoped>
-.breadcrumbs { font-family: var(--font-family-mono); font-size: var(--text-sm); color: var(--text-muted); margin-bottom: var(--space-6); }
 .breadcrumbs a { color: var(--accent-primary); text-decoration: none; }
 .lead { font-size: var(--text-lg); color: var(--text-secondary); margin-bottom: var(--space-10); }
 .reading-nav { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }

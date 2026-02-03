@@ -8,6 +8,7 @@
 import { useHead } from '@vueuse/head'
 import PageContainer from '../../components/PageContainer.vue'
 import NavigationCard from '../../components/NavigationCard.vue'
+import Breadcrumbs from '../../components/Breadcrumbs.vue'
 
 useHead({
   title: 'Quantum Computing 101 - Bitcoin Quantum Hub',
@@ -16,6 +17,11 @@ useHead({
     content: 'Introduction to quantum computing fundamentals: history, key concepts, and recent developments.'
   }]
 })
+
+const breadcrumbs = [
+  { label: 'Learn', path: '/learn' },
+  { label: 'Quantum Computing 101' }
+]
 
 const subtopics = [
   {
@@ -42,11 +48,7 @@ const subtopics = [
 <template>
   <PageContainer>
     <div class="page-header">
-      <nav class="breadcrumbs" aria-label="Breadcrumb">
-        <router-link to="/learn">Learn</router-link>
-        <span aria-hidden="true">/</span>
-        <span class="current">Quantum Computing 101</span>
-      </nav>
+      <Breadcrumbs :items="breadcrumbs" />
       
       <h1>Quantum Computing 101</h1>
       <p class="lead">
@@ -80,26 +82,6 @@ const subtopics = [
 <style scoped>
 .page-header {
   margin-bottom: var(--space-10);
-}
-
-.breadcrumbs {
-  font-family: var(--font-family-mono);
-  font-size: var(--text-sm);
-  color: var(--text-muted);
-  margin-bottom: var(--space-4);
-}
-
-.breadcrumbs a {
-  color: var(--accent-primary);
-  text-decoration: none;
-}
-
-.breadcrumbs a:hover {
-  text-decoration: underline;
-}
-
-.breadcrumbs .current {
-  color: var(--text-secondary);
 }
 
 .lead {

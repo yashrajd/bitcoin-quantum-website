@@ -1,6 +1,7 @@
 <script setup>
 import { useHead } from '@vueuse/head'
 import PageContainer from '../../components/PageContainer.vue'
+import Breadcrumbs from '../../components/Breadcrumbs.vue'
 useHead({
   title: 'Expert Perspectives - Bitcoin Quantum Hub',
   meta: [{ name: 'description', content: 'Expert predictions and academic estimates on quantum threats to Bitcoin.' }]
@@ -30,13 +31,7 @@ const perspectives = [
 
 <template>
   <PageContainer>
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <router-link to="/learn">Learn</router-link>
-      <span>/</span>
-      <router-link to="/learn/timeline">Timeline</router-link>
-      <span>/</span>
-      <span class="current">Expert Perspectives</span>
-    </nav>
+    <Breadcrumbs :items="breadcrumbs" />
     
     <h1>Expert Perspectives</h1>
     <p class="lead">Estimates vary widely on when quantum computers will threaten Bitcoin. Here's what different experts are saying.</p>
@@ -59,7 +54,6 @@ const perspectives = [
 </template>
 
 <style scoped>
-.breadcrumbs { font-family: var(--font-family-mono); font-size: var(--text-sm); color: var(--text-muted); margin-bottom: var(--space-6); }
 .breadcrumbs a { color: var(--accent-primary); text-decoration: none; }
 .lead { font-size: var(--text-lg); color: var(--text-secondary); margin-bottom: var(--space-10); }
 .perspectives-list { display: flex; flex-direction: column; gap: var(--space-4); }
