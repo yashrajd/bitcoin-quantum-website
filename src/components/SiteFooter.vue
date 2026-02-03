@@ -30,7 +30,7 @@ const footerNav = {
     title: 'BIP-360',
     links: [
       { label: 'Overview', path: '/bip-360/overview' },
-      { label: 'Technical Details', path: '/bip-360/technical' },
+      { label: 'Technical Deep Dive', path: '/bip-360/technical' },
       { label: 'User Guide', path: '/bip-360/user-guide' }
     ]
   },

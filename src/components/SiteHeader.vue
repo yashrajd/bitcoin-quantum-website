@@ -45,14 +45,20 @@ const navItems = [
   },
   { 
     label: 'BIP-360', 
-    path: '/bip-360'
+    path: '/bip-360',
+    children: [
+      { label: 'Overview', path: '/bip-360/overview' },
+      { label: 'Technical Deep Dive', path: '/bip-360/technical' },
+      { label: 'Status', path: '/bip-360/status' }
+    ]
   },
   { 
     label: 'Resources', 
     path: '/resources',
     children: [
       { label: 'FAQ', path: '/resources/faq' },
-      { label: 'Reading List', path: '/resources/reading-list' }
+      { label: 'Reading List', path: '/resources/reading-list' },
+      { label: 'External Links', path: '/resources/external-links' }
     ]
   },
   { label: 'News', path: '/news' },
