@@ -66,8 +66,7 @@ const pathways = [
     description: 'Deep dive into the leading proposal for quantum-resistant Bitcoin addresses.',
     link: '/bip-360',
     linkText: 'Visit BIP-360 Hub',
-    color: 'primary',
-    featured: true
+    color: 'primary'
   }
 ]
 

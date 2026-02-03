@@ -11,7 +11,6 @@
  * - link: String - Router link destination
  * - linkText: String - Text for the CTA link
  * - color: String - Color theme (primary, success, info)
- * - featured: Boolean - Whether this is a featured card
  */
 
 <script setup>
@@ -40,10 +39,6 @@ defineProps({
     type: String,
     default: 'primary',
     validator: (value) => ['primary', 'success', 'info', 'warning'].includes(value)
-  },
-  featured: {
-    type: Boolean,
-    default: false
   }
 })
 </script>
@@ -51,7 +46,7 @@ defineProps({
 <template>
   <div 
     class="pathway-card"
-    :class="{ 'featured': featured, [`color-${color}`]: true }"
+    :class="[`color-${color}`]"
   >
     <div class="card-icon">{{ icon }}</div>
     <h3 class="card-title">{{ title }}</h3>
@@ -78,6 +73,7 @@ defineProps({
 .pathway-card:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
+  border-color: var(--border-secondary);
 }
 
 .pathway-card:focus-visible {
@@ -88,20 +84,6 @@ defineProps({
 .pathway-card:active {
   transform: translateY(0);
   box-shadow: var(--shadow-sm);
-}
-
-.pathway-card.featured {
-  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
-  border-color: var(--accent-primary);
-}
-
-.pathway-card.featured:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-glow);
-}
-
-.color-primary:hover {
-  border-color: var(--accent-primary);
 }
 
 .card-icon {
@@ -144,16 +126,5 @@ defineProps({
   transform: translateX(4px);
 }
 
-/* Color variations for accent */
-.color-success:hover {
-  border-color: var(--status-success);
-}
 
-.color-info:hover {
-  border-color: var(--accent-info);
-}
-
-.color-warning:hover {
-  border-color: var(--status-warning);
-}
 </style>
