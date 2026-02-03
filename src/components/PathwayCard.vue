@@ -76,8 +76,18 @@ defineProps({
 }
 
 .pathway-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
+}
+
+.pathway-card:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+.pathway-card:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
 }
 
 .pathway-card.featured {
@@ -86,7 +96,12 @@ defineProps({
 }
 
 .pathway-card.featured:hover {
+  transform: translateY(-2px);
   box-shadow: var(--shadow-glow);
+}
+
+.color-primary:hover {
+  border-color: var(--accent-primary);
 }
 
 .card-icon {

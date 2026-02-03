@@ -341,6 +341,22 @@ const updates = [
   transition: all var(--transition-base);
 }
 
+.stat-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-secondary);
+  box-shadow: var(--shadow-md);
+}
+
+.stat-card:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+.stat-card:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
 .stat-card.highlight {
   background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(0, 229, 255, 0.1));
   border-color: var(--accent-primary);
