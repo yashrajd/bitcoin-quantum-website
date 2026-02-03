@@ -12,6 +12,7 @@ useHead({
     <div class="page-header">
       <span class="terminal-prompt section-prompt">/about</span>
       <h1>About This Project</h1>
+    </div>
     
     <h2>Mission</h2>
     <p>The Bitcoin Quantum Hub is an educational resource dedicated to helping the Bitcoin community understand and prepare for the quantum computing threat. Our goal is to provide accurate, accessible information about quantum risks and the solutions being developed.</p>

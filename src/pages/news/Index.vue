@@ -38,7 +38,8 @@ const news = [
     <div class="page-header">
       <span class="terminal-prompt section-prompt">/news</span>
       <h1>News & Updates</h1>
-    <p class="lead">Latest developments in quantum computing and Bitcoin security.</p>
+      <p class="lead">Latest developments in quantum computing and Bitcoin security.</p>
+    </div>
     
     <div class="news-list">
       <article v-for="item in news" :key="item.title" class="news-item">
