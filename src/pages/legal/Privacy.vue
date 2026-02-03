@@ -50,18 +50,6 @@ useHead({
   max-width: 768px;
 }
 
-.content-section h2 {
-  color: var(--accent-primary);
-  margin-top: var(--space-8);
-  margin-bottom: var(--space-4);
-}
-
-.content-section p {
-  color: var(--text-secondary);
-  line-height: 1.8;
-  margin-bottom: var(--space-4);
-}
-
 .contact-note {
   background: linear-gradient(135deg, rgba(0, 229, 255, 0.1), rgba(0, 229, 255, 0.05));
   border: 1px solid var(--accent-info);

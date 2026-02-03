@@ -93,16 +93,6 @@ const breadcrumbs = [
   margin-bottom: var(--space-8);
 }
 
-.content-section h2 {
-  color: var(--accent-primary);
-  margin-bottom: var(--space-4);
-}
-
-.content-section p {
-  color: var(--text-secondary);
-  line-height: 1.8;
-}
-
 .feature-list {
   list-style: none;
   padding: 0;
