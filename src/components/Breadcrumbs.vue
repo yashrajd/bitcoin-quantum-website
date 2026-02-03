@@ -6,13 +6,6 @@
  * Props:
  * - items: Array of breadcrumb objects with { label, path? }
  *   Last item should not have a path (current page)
- * 
- * Example usage:
- * <Breadcrumbs :items="[
- *   { label: 'Learn', path: '/learn' },
- *   { label: 'Quantum Computing 101', path: '/learn/quantum-computing-101' },
- *   { label: 'History' }
- * ]" />
  */
 
 <script setup>
