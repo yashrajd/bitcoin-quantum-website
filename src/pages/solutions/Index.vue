@@ -5,13 +5,28 @@
 <script setup>
 import { useHead } from '@vueuse/head'
 import PageContainer from '../../components/PageContainer.vue'
+import NavigationCard from '../../components/NavigationCard.vue'
 
 useHead({
   title: 'Solutions - Bitcoin Quantum Hub',
-  meta: [{
-    name: 'description',
-    content: 'Post-quantum cryptographic solutions for securing Bitcoin against quantum threats.'
-  }]
+  meta: [
+    {
+      name: 'description',
+      content: 'Post-quantum cryptographic solutions for securing Bitcoin against quantum threats.'
+    },
+    {
+      property: 'og:title',
+      content: 'Solutions - Bitcoin Quantum Hub'
+    },
+    {
+      property: 'og:description',
+      content: 'Post-quantum cryptographic solutions for securing Bitcoin against quantum threats.'
+    },
+    {
+      property: 'og:type',
+      content: 'website'
+    }
+  ]
 })
 
 const solutions = [
@@ -88,7 +103,7 @@ const solutions = [
 .lead {
   font-size: var(--text-xl);
   color: var(--text-secondary);
-  max-width: 768px;
+  max-width: 800px;
 }
 
 .solutions-grid {

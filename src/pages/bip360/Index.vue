@@ -9,10 +9,24 @@ import NavigationCard from '../../components/NavigationCard.vue'
 
 useHead({
   title: 'BIP-360 Hub - Bitcoin Quantum Hub',
-  meta: [{
-    name: 'description',
-    content: 'Comprehensive resource on Bitcoin Improvement Proposal 360 for quantum resistance.'
-  }]
+  meta: [
+    {
+      name: 'description',
+      content: 'Comprehensive resource on Bitcoin Improvement Proposal 360 for quantum resistance.'
+    },
+    {
+      property: 'og:title',
+      content: 'BIP-360 Hub - Bitcoin Quantum Hub'
+    },
+    {
+      property: 'og:description',
+      content: 'Comprehensive resource on Bitcoin Improvement Proposal 360 for quantum resistance.'
+    },
+    {
+      property: 'og:type',
+      content: 'website'
+    }
+  ]
 })
 
 const sections = [

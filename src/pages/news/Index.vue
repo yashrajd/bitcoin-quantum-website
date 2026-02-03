@@ -3,7 +3,12 @@ import { useHead } from '@vueuse/head'
 import PageContainer from '../../components/PageContainer.vue'
 useHead({
   title: 'News & Updates - Bitcoin Quantum Hub',
-  meta: [{ name: 'description', content: 'Latest developments in quantum computing and Bitcoin security.' }]
+  meta: [
+    { name: 'description', content: 'Latest developments in quantum computing and Bitcoin security.' },
+    { property: 'og:title', content: 'News & Updates - Bitcoin Quantum Hub' },
+    { property: 'og:description', content: 'Latest developments in quantum computing and Bitcoin security.' },
+    { property: 'og:type', content: 'website' }
+  ]
 })
 
 const news = [

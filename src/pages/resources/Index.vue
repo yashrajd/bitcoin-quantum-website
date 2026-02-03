@@ -5,7 +5,12 @@ import NavigationCard from '../../components/NavigationCard.vue'
 
 useHead({
   title: 'Resources - Bitcoin Quantum Hub',
-  meta: [{ name: 'description', content: 'Curated resources for deeper learning about quantum threats to Bitcoin.' }]
+  meta: [
+    { name: 'description', content: 'Curated resources for deeper learning about quantum threats to Bitcoin.' },
+    { property: 'og:title', content: 'Resources - Bitcoin Quantum Hub' },
+    { property: 'og:description', content: 'Curated resources for deeper learning about quantum threats to Bitcoin.' },
+    { property: 'og:type', content: 'website' }
+  ]
 })
 
 const resources = [

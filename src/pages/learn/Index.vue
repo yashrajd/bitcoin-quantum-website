@@ -11,10 +11,24 @@ import ContentCard from '../../components/ContentCard.vue'
 
 useHead({
   title: 'Learn - Bitcoin Quantum Hub',
-  meta: [{
-    name: 'description',
-    content: 'Educational resources about quantum computing and its impact on Bitcoin security.'
-  }]
+  meta: [
+    {
+      name: 'description',
+      content: 'Educational resources about quantum computing and its impact on Bitcoin security.'
+    },
+    {
+      property: 'og:title',
+      content: 'Learn - Bitcoin Quantum Hub'
+    },
+    {
+      property: 'og:description',
+      content: 'Educational resources about quantum computing and its impact on Bitcoin security.'
+    },
+    {
+      property: 'og:type',
+      content: 'website'
+    }
+  ]
 })
 
 const sections = [
