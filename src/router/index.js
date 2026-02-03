@@ -395,6 +395,28 @@ const routes = [
   },
   
   // ==========================================
+  // LEGAL SECTION
+  // ==========================================
+  {
+    path: '/privacy',
+    name: 'Privacy',
+    component: () => import('../pages/legal/Privacy.vue'),
+    meta: {
+      title: 'Privacy Policy - Bitcoin Quantum Hub',
+      description: 'Privacy policy for the Bitcoin Quantum Hub website.'
+    }
+  },
+  {
+    path: '/terms',
+    name: 'Terms',
+    component: () => import('../pages/legal/Terms.vue'),
+    meta: {
+      title: 'Terms of Use - Bitcoin Quantum Hub',
+      description: 'Terms of use for the Bitcoin Quantum Hub website.'
+    }
+  },
+  
+  // ==========================================
   // 404 CATCH-ALL
   // ==========================================
   {
