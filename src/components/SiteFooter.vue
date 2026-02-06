@@ -90,9 +90,9 @@ const currentYear = new Date().getFullYear()
         </div>
         
         <p class="copyright">
-          © {{ currentYear }} Bitcoin Quantum Hub. 
+          © {{ currentYear }} Bitcoin Quantum Hub by yashrajd. 
           <span class="disclaimer">
-            Educational content only. Not financial advice.
+            Open Source (GPL v3.0) • Educational content only • Not financial advice.
           </span>
         </p>
         
