@@ -59,6 +59,9 @@ const footerNav = {
 }
 
 const currentYear = new Date().getFullYear()
+
+// Get last updated date from build-time environment variable
+const lastUpdated = import.meta.env?.VITE_LAST_UPDATED || 'Unknown'
 </script>
 
 <template>
@@ -97,7 +100,7 @@ const currentYear = new Date().getFullYear()
         </p>
         
         <div class="footer-meta">
-          <span class="badge badge-info">Last Updated: Jan 2026</span>
+          <span class="badge badge-info">Last Updated: {{ lastUpdated }}</span>
         </div>
       </div>
     </div>
