@@ -27,21 +27,21 @@ const approaches = [
     link: '/solutions/post-quantum-cryptography/hash-based',
     description: 'Quantum-resistant signatures relying on hash function security rather than mathematical problems vulnerable to Shor\'s Algorithm. Examples: SPHINCS+, Lamport signatures.',
     badge: 'NIST standardized',
-    linkText: 'Learn more →'
+    linkText: 'Learn more'
   },
   {
     title: 'Lattice-Based Cryptography',
     link: '/solutions/post-quantum-cryptography/lattice-based',
     description: 'Algorithms based on the difficulty of solving lattice problems, standardized by NIST for post-quantum security. Examples: CRYSTALS-Dilithium, CRYSTALS-Kyber.',
     badge: 'NIST standardized',
-    linkText: 'Learn more →'
+    linkText: 'Learn more'
   },
   {
     title: 'Hybrid Models',
     link: '/solutions/post-quantum-cryptography/hybrid',
     description: 'Combining classical and post-quantum methods during transition periods for added security. Examples: Dual ECDSA + PQC signatures.',
     badge: 'NIST recommended',
-    linkText: 'Learn more →'
+    linkText: 'Learn more'
   }
 ]
 </script>
