@@ -15,7 +15,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="content-card">
+  <router-link :to="link" class="content-card">
     <span class="card-icon">{{ icon }}</span>
     <h3 class="card-title">{{ title }}</h3>
     <p class="card-description">{{ description }}</p>
@@ -25,11 +25,11 @@ defineProps({
         {{ topic }}
       </li>
     </ul>
-    <router-link :to="link" class="card-link">
+    <span class="card-link">
       Explore {{ title }}
-      <span aria-hidden="true">→</span>
-    </router-link>
-  </div>
+      <span class="link-arrow" aria-hidden="true">→</span>
+    </span>
+  </router-link>
 </template>
 
 <style scoped>
@@ -42,11 +42,24 @@ defineProps({
   padding: var(--space-6);
   transition: all var(--transition-base);
   height: 100%;
+  text-decoration: none;
+  color: inherit;
 }
 
 .content-card:hover {
   border-color: var(--accent-primary);
   transform: translateY(-4px);
+  text-decoration: none;
+}
+
+.content-card:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+.content-card:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
 }
 
 .card-icon {
@@ -91,9 +104,19 @@ defineProps({
   color: var(--accent-primary);
   font-weight: 600;
   text-decoration: none;
+  transition: gap var(--transition-fast);
 }
 
 .card-link:hover {
   text-decoration: underline;
+  gap: var(--space-3);
+}
+
+.link-arrow {
+  transition: transform var(--transition-fast);
+}
+
+.card-link:hover .link-arrow {
+  transform: translateX(4px);
 }
 </style>

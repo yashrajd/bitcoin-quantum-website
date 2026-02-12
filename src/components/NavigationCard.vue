@@ -80,7 +80,10 @@ defineProps({
       <p class="card-description">{{ description }}</p>
       
       <!-- CTA Link -->
-      <span class="card-link">{{ linkText }}</span>
+      <span class="card-link">
+        {{ linkText }}
+        <span class="link-arrow" aria-hidden="true">→</span>
+      </span>
     </div>
   </router-link>
 </template>
@@ -110,6 +113,16 @@ defineProps({
   text-decoration: none;
 }
 
+.navigation-card.layout-grid:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+.navigation-card.layout-grid:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
 /* List Layout - Horizontal cards, slide right on hover */
 .navigation-card.layout-list {
   flex-direction: row;
@@ -121,6 +134,16 @@ defineProps({
   border-color: var(--accent-primary);
   transform: translateX(8px);
   text-decoration: none;
+}
+
+.navigation-card.layout-list:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+.navigation-card.layout-list:active {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-sm);
 }
 
 /* Number Badge (for sequential list layouts) */
@@ -203,9 +226,26 @@ defineProps({
 
 /* Link Text */
 .card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
   color: var(--accent-primary);
   font-weight: 600;
-  display: inline-block;
+  text-decoration: none;
+  transition: gap var(--transition-fast);
+}
+
+.card-link:hover {
+  text-decoration: underline;
+  gap: var(--space-3);
+}
+
+.link-arrow {
+  transition: transform var(--transition-fast);
+}
+
+.card-link:hover .link-arrow {
+  transform: translateX(4px);
 }
 
 .layout-list .card-link {

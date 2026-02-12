@@ -44,18 +44,19 @@ defineProps({
 </script>
 
 <template>
-  <div 
+  <router-link
+    :to="link"
     class="pathway-card"
     :class="[`color-${color}`]"
   >
     <div class="card-icon">{{ icon }}</div>
     <h3 class="card-title">{{ title }}</h3>
     <p class="card-description">{{ description }}</p>
-    <router-link :to="link" class="card-link">
+    <span class="card-link">
       {{ linkText }}
       <span class="link-arrow" aria-hidden="true">→</span>
-    </router-link>
-  </div>
+    </span>
+  </router-link>
 </template>
 
 <style scoped>
@@ -68,11 +69,14 @@ defineProps({
   border-radius: var(--border-radius-lg);
   transition: all var(--transition-base);
   height: 100%;
+  text-decoration: none;
+  color: inherit;
 }
 
 .pathway-card:hover {
   transform: translateY(-4px);
   border-color: var(--accent-primary);
+  text-decoration: none;
 }
 
 .pathway-card:focus-visible {

@@ -66,9 +66,10 @@ const solutions = [
     </div>
     
     <div class="solutions-grid">
-      <div
+      <router-link
         v-for="solution in solutions"
         :key="solution.link"
+        :to="solution.link"
         class="solution-card"
       >
         <span class="solution-icon">{{ solution.icon }}</span>
@@ -77,10 +78,11 @@ const solutions = [
         <ul class="solution-items">
           <li v-for="item in solution.items" :key="item">{{ item }}</li>
         </ul>
-        <router-link :to="solution.link" class="btn btn-primary">
+        <span class="solution-link">
           Explore {{ solution.title }}
-        </router-link>
-      </div>
+          <span class="link-arrow" aria-hidden="true">→</span>
+        </span>
+      </router-link>
     </div>
   </PageContainer>
 </template>
@@ -120,11 +122,24 @@ const solutions = [
   display: flex;
   flex-direction: column;
   transition: all var(--transition-base);
+  text-decoration: none;
+  color: inherit;
 }
 
 .solution-card:hover {
   border-color: var(--accent-primary);
   transform: translateY(-4px);
+  text-decoration: none;
+}
+
+.solution-card:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+.solution-card:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
 }
 
 .solution-icon {
@@ -157,6 +172,29 @@ const solutions = [
 .solution-items li:before {
   content: '› ';
   color: var(--accent-primary);
+}
+
+.solution-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--accent-primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: gap var(--transition-fast);
+}
+
+.solution-link:hover {
+  text-decoration: underline;
+  gap: var(--space-3);
+}
+
+.link-arrow {
+  transition: transform var(--transition-fast);
+}
+
+.solution-link:hover .link-arrow {
+  transform: translateX(4px);
 }
 
 @media (max-width: 1024px) {
