@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" fill="none">
+  <!-- Background -->
+  <rect width="320" height="180" fill="#1a1a2e"/>
+  
+  <!-- Border -->
+  <rect x="1" y="1" width="318" height="178" stroke="#333" stroke-width="2"/>
+  
+  <!-- Play button circle -->
+  <circle cx="160" cy="90" r="40" stroke="#00ff88" stroke-width="2" fill="none"/>
+  
+  <!-- Play triangle -->
+  <path d="M150 75 L150 105 L175 90 Z" fill="#00ff88"/>
+  
+  <!-- Decorative lines -->
+  <line x1="40" y1="160" x2="120" y2="160" stroke="#333" stroke-width="1"/>
+  <line x1="200" y1="160" x2="280" y2="160" stroke="#333" stroke-width="1"/>
+</svg>
