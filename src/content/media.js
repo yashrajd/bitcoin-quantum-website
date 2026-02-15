@@ -46,14 +46,14 @@ export const mediaItems = [
     source: "NIST"
   },
   {
-    id: "bip360-technical-deep-dive",
-    title: "BIP-360 Technical Deep Dive",
+    id: "slp-jamesob-feb2026",
+    title: "Is Quantum FUD BS? with James O'Beirne | SLP721",
     type: "video",
-    url: "https://www.youtube.com/watch?v=example3",
+    url: "https://www.youtube.com/watch?v=NTj3otRXz0w",
     thumbnail: null,
-    date: "2025-09-20",
+    date: "2026-02-13",
     featured: true,
-    source: "Bitcoin Explained"
+    source: "Stephen Livera Podcast"
   },
   {
     id: "quantum-computing-timeline-predictions",
