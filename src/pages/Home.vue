@@ -15,6 +15,8 @@
 import { useHead } from '@vueuse/head'
 import PageContainer from '../components/PageContainer.vue'
 import PathwayCard from '../components/PathwayCard.vue'
+import MediaCard from '../components/MediaCard.vue'
+import { getFeaturedMedia } from '../content/media.js'
 
 // SEO meta tags
 useHead({
@@ -76,6 +78,9 @@ const stats = [
   { value: '2031', label: 'UK NCSC migration deadline', highlight: false },
   { value: '3', label: 'NIST standardized algorithms', highlight: false }
 ]
+
+// Featured media for Community Voices section
+const featuredMedia = getFeaturedMedia(3)
 
 // Latest updates preview
 const updates = [
@@ -167,6 +172,31 @@ const updates = [
         </div>
       </div>
     </section>
+    
+    <!-- Community Voices Section -->
+    <PageContainer>
+      <section class="community-voices" aria-labelledby="voices-title">
+        <div class="section-header">
+          <h2 id="voices-title" class="section-title">Community Voices</h2>
+          <router-link to="/resources/media" class="section-link">
+            View All →
+          </router-link>
+        </div>
+        
+        <div class="voices-grid">
+          <MediaCard
+            v-for="item in featuredMedia"
+            :key="item.id"
+            :title="item.title"
+            :type="item.type"
+            :url="item.url"
+            :thumbnail="item.thumbnail"
+            :date="item.date"
+            :source="item.source"
+          />
+        </div>
+      </section>
+    </PageContainer>
     
     <!-- Latest Updates Section -->
     <PageContainer>
@@ -372,6 +402,17 @@ const updates = [
   font-size: var(--text-sm);
 }
 
+/* Community Voices Section */
+.community-voices {
+  padding: var(--space-16) 0 var(--space-8);
+}
+
+.voices-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
 /* Updates Section */
 .updates {
   padding: var(--space-16) 0 var(--space-8);
@@ -485,6 +526,7 @@ const updates = [
 @media (max-width: 1024px) {
   .pathways-grid,
   .stats-grid,
+  .voices-grid,
   .updates-grid,
   .links-grid {
     grid-template-columns: 1fr;
