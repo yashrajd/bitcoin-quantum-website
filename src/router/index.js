@@ -353,6 +353,15 @@ const routes = [
       description: 'Additional resources and community links.'
     }
   },
+  {
+    path: '/resources/media',
+    name: 'Media',
+    component: () => import('../pages/resources/Media.vue'),
+    meta: {
+      title: 'Podcasts & Videos - Bitcoin Quantum Hub',
+      description: 'Curated podcasts and video interviews about quantum computing and Bitcoin security.'
+    }
+  },
   
   // ==========================================
   // NEWS SECTION
