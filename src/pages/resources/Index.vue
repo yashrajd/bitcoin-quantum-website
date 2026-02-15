@@ -31,6 +31,12 @@ const resources = [
     title: 'External Links',
     description: 'Community forums, news sources, and additional resources.',
     link: '/resources/external-links'
+  },
+  {
+    icon: '🎙️',
+    title: 'Podcasts & Videos',
+    description: 'Curated podcasts and video interviews from the community.',
+    link: '/resources/media'
   }
 ]
 </script>

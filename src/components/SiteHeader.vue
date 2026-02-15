@@ -58,7 +58,8 @@ const navItems = [
     children: [
       { label: 'FAQ', path: '/resources/faq' },
       { label: 'Reading List', path: '/resources/reading-list' },
-      { label: 'External Links', path: '/resources/external-links' }
+      { label: 'External Links', path: '/resources/external-links' },
+      { label: 'Podcasts & Videos', path: '/resources/media' }
     ]
   },
   { label: 'News', path: '/news' },
