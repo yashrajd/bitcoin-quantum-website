@@ -1,6 +1,27 @@
 /**
  * Media content data
  * Curated podcasts and video interviews about quantum computing and Bitcoin
+ *
+ * DATA STRUCTURE:
+ * - id: Unique identifier (kebab-case)
+ * - title: Display title
+ * - type: 'video' or 'audio'
+ * - url: External link to the media
+ * - thumbnail: Optional thumbnail URL. If null:
+ *   - YouTube URLs: Automatically generates thumbnail from video ID
+ *   - Other platforms: Falls back to placeholder image
+ * - date: ISO date string (YYYY-MM-DD)
+ * - featured: Boolean - featured items appear on homepage
+ * - source: Optional source name (shown as badge)
+ *
+ * THUMBNAIL AUTO-GENERATION:
+ * YouTube URLs automatically get thumbnails. Supported formats:
+ * - https://www.youtube.com/watch?v=VIDEO_ID
+ * - https://youtu.be/VIDEO_ID
+ * - https://www.youtube.com/embed/VIDEO_ID
+ *
+ * For other platforms (Spotify, etc.), manually provide thumbnail URL
+ * or leave null to use the placeholder.
  */
 
 export const mediaItems = [

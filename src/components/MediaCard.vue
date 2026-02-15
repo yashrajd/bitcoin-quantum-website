@@ -31,7 +31,40 @@ const props = defineProps({
 
 const typeEmoji = computed(() => props.type === 'video' ? '🎥' : '🎧')
 
-const thumbnailSrc = computed(() => props.thumbnail || '/images/media-placeholder.svg')
+/**
+ * Extract YouTube video ID from various URL formats
+ * Supports: youtube.com/watch?v=ID, youtu.be/ID, youtube.com/embed/ID
+ */
+function extractYouTubeId(url) {
+  if (!url) return null
+
+  const patterns = [
+    /youtube\.com\/watch\?v=([^&]+)/,
+    /youtu\.be\/([^?]+)/,
+    /youtube\.com\/embed\/([^?]+)/
+  ]
+
+  for (const pattern of patterns) {
+    const match = url.match(pattern)
+    if (match) return match[1]
+  }
+
+  return null
+}
+
+const thumbnailSrc = computed(() => {
+  // Use provided thumbnail if available
+  if (props.thumbnail) return props.thumbnail
+
+  // Auto-generate thumbnail for YouTube URLs
+  const youtubeId = extractYouTubeId(props.url)
+  if (youtubeId) {
+    return `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`
+  }
+
+  // Fallback to placeholder
+  return '/images/media-placeholder.svg'
+})
 
 const formattedDate = computed(() => {
   const date = new Date(props.date)
