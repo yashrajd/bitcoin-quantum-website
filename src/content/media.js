@@ -26,24 +26,24 @@
 
 export const mediaItems = [
   {
-    id: "quantum-threats-bitcoin-security-2025",
-    title: "Quantum Threats to Bitcoin Security",
+    id: "rearden-wbd-feb2026",
+    title: " The Quantum Computing Myth | Brandon Black",
     type: "video",
-    url: "https://www.youtube.com/watch?v=example1",
+    url: "https://www.youtube.com/watch?v=uZZkQRqnNE4",
     thumbnail: null,
-    date: "2025-11-15",
+    date: "2026-02-03",
     featured: true,
     source: "What Bitcoin Did"
   },
   {
-    id: "post-quantum-cryptography-explained",
-    title: "Post-Quantum Cryptography Explained",
-    type: "audio",
-    url: "https://open.spotify.com/episode/example2",
+    id: "slp-bluematt-feb2026",
+    title: " What do Bitcoiners do about Quantum? with Matt Corallo | SLP719 ",
+    type: "video",
+    url: "https://www.youtube.com/watch?v=Sm7y80gnA4k",
     thumbnail: null,
-    date: "2025-10-28",
+    date: "2026-02-11",
     featured: true,
-    source: "NIST"
+    source: "Stephen Livera Podcast"
   },
   {
     id: "slp-jamesob-feb2026",
@@ -56,14 +56,14 @@ export const mediaItems = [
     source: "Stephen Livera Podcast"
   },
   {
-    id: "quantum-computing-timeline-predictions",
+    id: "test-quantum-computing-timeline-predictions",
     title: "Quantum Computing Timeline Predictions",
     type: "audio",
     url: "https://open.spotify.com/episode/example4",
     thumbnail: null,
     date: "2025-08-12",
     featured: false,
-    source: "Lex Fridman Podcast"
+    source: "test-empty"
   },
   {
     id: "bitcoin-cryptography-fundamentals",
