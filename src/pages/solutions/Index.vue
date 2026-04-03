@@ -42,7 +42,7 @@ const solutions = [
     icon: '📋',
     description: 'Bitcoin Improvement Proposals addressing quantum resistance.',
     link: '/solutions/bitcoin-proposals',
-    items: ['BIP-360 (Featured)', 'BIP-347 / OP_CAT', 'Other Proposals']
+    items: ['BIP-360', 'BIP-347 / OP_CAT', 'Other Proposals']
   },
   {
     title: 'Migration Pathways',

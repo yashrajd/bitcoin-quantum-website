@@ -2,7 +2,7 @@
  * Vue Router Configuration
  * 
  * Defines all routes for the Bitcoin Quantum Hub website.
- * Routes are organized by section: Learn, Solutions, BIP-360, Resources, News, About
+ * Routes are organized by section: Learn, Solutions, Resources, News, About
  * 
  * Security: All routes use lazy loading for code splitting
  * Accessibility: Route meta includes page titles for head management

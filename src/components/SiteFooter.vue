@@ -26,14 +26,6 @@ const footerNav = {
       { label: 'Migration Pathways', path: '/solutions/migration' }
     ]
   },
-  bip360: {
-    title: 'BIP-360',
-    links: [
-      { label: 'Overview', path: '/bip-360/overview' },
-      { label: 'Technical Deep Dive', path: '/bip-360/technical' },
-      { label: 'User Guide', path: '/bip-360/user-guide' }
-    ]
-  },
   resources: {
     title: 'Resources',
     links: [

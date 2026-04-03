@@ -34,8 +34,8 @@ const navItems = [
       { label: 'Timeline & Estimates', path: '/learn/timeline' }
     ]
   },
-  { 
-    label: 'Solutions', 
+  {
+    label: 'Solutions',
     path: '/solutions',
     children: [
       { label: 'Post-Quantum Cryptography', path: '/solutions/post-quantum-cryptography' },
@@ -43,16 +43,7 @@ const navItems = [
       { label: 'Migration Pathways', path: '/solutions/migration' }
     ]
   },
-  { 
-    label: 'BIP-360', 
-    path: '/bip-360',
-    children: [
-      { label: 'Overview', path: '/bip-360/overview' },
-      { label: 'Technical Deep Dive', path: '/bip-360/technical' },
-      { label: 'Status', path: '/bip-360/status' }
-    ]
-  },
-  { 
+  {
     label: 'Resources', 
     path: '/resources',
     children: [

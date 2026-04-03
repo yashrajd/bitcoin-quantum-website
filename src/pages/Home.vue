@@ -4,7 +4,7 @@
  * The main entry point of the Bitcoin Quantum Hub.
  * Features:
  * - Hero section with headline and introduction
- * - User pathway cards (Newcomers, Solutions, BIP-360)
+ * - User pathway cards (Newcomers, Solutions)
  * - Key statistics callout
  * - Latest updates preview
  * 
@@ -60,15 +60,6 @@ const pathways = [
     link: '/solutions',
     linkText: 'Explore Solutions',
     color: 'success'
-  },
-  {
-    id: 'bip360',
-    icon: '⚡',
-    title: 'Tell me about BIP-360',
-    description: 'Deep dive into the leading proposal for quantum-resistant Bitcoin addresses.',
-    link: '/bip-360',
-    linkText: 'Visit BIP-360 Hub',
-    color: 'primary'
   }
 ]
 
