@@ -17,6 +17,7 @@ import PageContainer from '../components/PageContainer.vue'
 import PathwayCard from '../components/PathwayCard.vue'
 import MediaCard from '../components/MediaCard.vue'
 import { getFeaturedMedia } from '../content/media.js'
+import { getLatestNews } from '../content/news.js'
 
 // SEO meta tags
 useHead({
@@ -73,27 +74,8 @@ const stats = [
 // Featured media for Community Voices section
 const featuredMedia = getFeaturedMedia(3)
 
-// Latest updates preview
-const updates = [
-  {
-    date: 'January 2026',
-    title: 'NIST Post-Quantum Standards Finalized',
-    excerpt: 'NIST has released its final standards for post-quantum cryptography, including CRYSTALS-Dilithium and CRYSTALS-Kyber.',
-    link: '/news/nist-standards'
-  },
-  {
-    date: 'January 2026',
-    title: 'BIP-360 Technical Specification Updated',
-    excerpt: 'The latest revision clarifies quantum witness structure and SegWit integration details.',
-    link: '/bip-360/status'
-  },
-  {
-    date: 'December 2025',
-    title: 'CISA Issues Quantum Migration Guidance',
-    excerpt: 'New guidance from CISA helps organizations prepare for the transition to post-quantum cryptography.',
-    link: '/learn/timeline/government-deadlines'
-  }
-]
+// Latest updates preview (3 most recent news items)
+const updates = getLatestNews(3)
 </script>
 
 <template>

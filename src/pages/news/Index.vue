@@ -1,6 +1,8 @@
 <script setup>
 import { useHead } from '@vueuse/head'
 import PageContainer from '../../components/PageContainer.vue'
+import { getAllNews } from '../../content/news.js'
+
 useHead({
   title: 'News & Updates - Bitcoin Quantum Hub',
   meta: [
@@ -11,26 +13,7 @@ useHead({
   ]
 })
 
-const news = [
-  {
-    date: 'January 2026',
-    title: 'NIST Post-Quantum Standards Finalized',
-    excerpt: 'NIST has released its final standards for post-quantum cryptography, including CRYSTALS-Dilithium and CRYSTALS-Kyber.',
-    link: '/news/nist-standards'
-  },
-  {
-    date: 'January 2026',
-    title: 'BIP-360 Technical Specification Updated',
-    excerpt: 'The latest revision clarifies quantum witness structure and SegWit integration details.',
-    link: '/bip-360/status'
-  },
-  {
-    date: 'December 2025',
-    title: 'CISA Issues Quantum Migration Guidance',
-    excerpt: 'New guidance from CISA helps organizations prepare for the transition to post-quantum cryptography.',
-    link: '/learn/timeline/government-deadlines'
-  }
-]
+const news = getAllNews()
 </script>
 
 <template>
