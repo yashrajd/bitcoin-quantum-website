@@ -23,7 +23,7 @@ const resources = [
   {
     icon: '📚',
     title: 'Reading List',
-    description: 'Academic papers, government publications, and technical documentation.',
+    description: 'Academic papers, expert opinion, and technical documentation.',
     link: '/resources/reading-list'
   },
   {

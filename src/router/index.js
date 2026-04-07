@@ -314,25 +314,25 @@ const routes = [
     component: () => import('../pages/resources/ReadingList.vue'),
     meta: {
       title: 'Reading List - Bitcoin Quantum Hub',
-      description: 'Academic papers, government publications, and technical documentation.'
+      description: 'Academic papers, expert opinion, and technical documentation.'
     }
   },
   {
-    path: '/resources/reading-list/academic',
-    name: 'AcademicPapers',
-    component: () => import('../pages/resources/AcademicPapers.vue'),
+    path: '/resources/reading-list/academic-and-government-publications',
+    name: 'AcademicAndGovernmentPublications',
+    component: () => import('../pages/resources/AcademicAndGovernmentPublications.vue'),
     meta: {
-      title: 'Academic Papers - Bitcoin Quantum Hub',
-      description: 'Peer-reviewed research on quantum computing and blockchain security.'
+      title: 'Academic and Government Publications - Bitcoin Quantum Hub',
+      description: 'Peer-reviewed research and official government guidance on quantum computing and blockchain security.'
     }
   },
   {
-    path: '/resources/reading-list/government',
-    name: 'GovernmentPublications',
-    component: () => import('../pages/resources/GovernmentPublications.vue'),
+    path: '/resources/reading-list/expert-opinion',
+    name: 'ExpertOpinion',
+    component: () => import('../pages/resources/ExpertOpinion.vue'),
     meta: {
-      title: 'Government Publications - Bitcoin Quantum Hub',
-      description: 'Official guidance from NIST, CISA, NSA, and other agencies.'
+      title: 'Expert Opinion - Bitcoin Quantum Hub',
+      description: 'Blog posts and analysis from leading researchers and practitioners.'
     }
   },
   {

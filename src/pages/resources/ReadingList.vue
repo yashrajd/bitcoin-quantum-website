@@ -6,7 +6,7 @@ import NavigationCard from '../../components/NavigationCard.vue'
 
 useHead({
   title: 'Reading List - Bitcoin Quantum Hub',
-  meta: [{ name: 'description', content: 'Academic papers, government publications, and technical documentation.' }]
+  meta: [{ name: 'description', content: 'Academic papers, expert opinion, and technical documentation.' }]
 })
 
 const breadcrumbs = [
@@ -16,15 +16,15 @@ const breadcrumbs = [
 
 const categories = [
   {
-    title: 'Academic Papers',
-    description: 'Peer-reviewed research on quantum computing and blockchain security.',
-    link: '/resources/reading-list/academic',
+    title: 'Academic and Government Publications',
+    description: 'Peer-reviewed research and official government guidance on quantum computing and blockchain security.',
+    link: '/resources/reading-list/academic-and-government-publications',
     linkText: 'Explore →'
   },
   {
-    title: 'Government Publications',
-    description: 'Official guidance from NIST, CISA, NSA, UK NCSC, and other agencies.',
-    link: '/resources/reading-list/government',
+    title: 'Expert Opinion',
+    description: 'Blog posts and analysis from leading researchers and practitioners.',
+    link: '/resources/reading-list/expert-opinion',
     linkText: 'Explore →'
   },
   {

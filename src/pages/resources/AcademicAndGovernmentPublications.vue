@@ -3,32 +3,44 @@ import { useHead } from '@vueuse/head'
 import PageContainer from '../../components/PageContainer.vue'
 import Breadcrumbs from '../../components/Breadcrumbs.vue'
 useHead({
-  title: 'Government Publications - Bitcoin Quantum Hub',
-  meta: [{ name: 'description', content: 'Official guidance from NIST, CISA, NSA, and other agencies.' }]
+  title: 'Academic and Government Publications - Bitcoin Quantum Hub',
+  meta: [{ name: 'description', content: 'Peer-reviewed research and official government guidance on quantum computing and blockchain security.' }]
 })
 
 const breadcrumbs = [
   { label: 'Resources', path: '/resources' },
   { label: 'Reading List', path: '/resources/reading-list' },
-  { label: 'Government Publications' }
+  { label: 'Academic and Government Publications' }
 ]
 
-const publications = [
+const papers = [
+  {
+    title: 'Navigating the quantum computing threat landscape for blockchains: A comprehensive survey',
+    source: 'ScienceDirect',
+    description: 'Academic survey of quantum threats to blockchain systems, including Bitcoin and Ethereum.',
+    link: 'https://www.sciencedirect.com'
+  },
+  {
+    title: 'Post-Quantum Cryptography Standardization',
+    source: 'NIST',
+    description: 'Official standards and documentation for quantum-resistant cryptographic algorithms.',
+    link: 'https://www.nist.gov'
+  },
   {
     title: 'Guidance on Planning for Post-Quantum Cryptography',
-    agency: 'CISA',
+    source: 'CISA',
     description: 'U.S. government guidance for organizations on preparing for the transition to quantum-resistant cryptography.',
     link: 'https://www.cisa.gov'
   },
   {
     title: 'Announcing Plans to Transition to Quantum-Resistant Algorithms',
-    agency: 'NSA',
+    source: 'NSA',
     description: 'The U.S. National Security Agency\'s strategy for moving to quantum-resistant security solutions.',
     link: 'https://www.nsa.gov'
   },
   {
     title: 'Preparing for Quantum-Safe Cryptography',
-    agency: 'UK NCSC',
+    source: 'UK NCSC',
     description: 'The UK National Cyber Security Centre\'s recommendations and timelines for quantum risk mitigation.',
     link: 'https://www.ncsc.gov.uk'
   }
@@ -39,15 +51,15 @@ const publications = [
   <PageContainer>
     <Breadcrumbs :items="breadcrumbs" />
     
-    <h1>Government Publications</h1>
+    <h1>Academic and Government Publications</h1>
     
-    <div class="publications-list">
-      <article v-for="pub in publications" :key="pub.title" class="pub-card">
-        <h3>{{ pub.title }}</h3>
-        <span class="agency">{{ pub.agency }}</span>
-        <p>{{ pub.description }}</p>
-        <a :href="pub.link" target="_blank" rel="noopener noreferrer" class="pub-link">
-          View Publication ↗
+    <div class="papers-list">
+      <article v-for="paper in papers" :key="paper.title" class="paper-card">
+        <h3>{{ paper.title }}</h3>
+        <span class="source">{{ paper.source }}</span>
+        <p>{{ paper.description }}</p>
+        <a :href="paper.link" target="_blank" rel="noopener noreferrer" class="paper-link">
+          View Paper ↗
         </a>
       </article>
     </div>
@@ -56,15 +68,15 @@ const publications = [
 
 <style scoped>
 .breadcrumbs a { color: var(--accent-primary); text-decoration: none; }
-.publications-list { display: flex; flex-direction: column; gap: var(--space-4); }
-.pub-card {
+.papers-list { display: flex; flex-direction: column; gap: var(--space-4); }
+.paper-card {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-primary);
   border-radius: var(--border-radius-lg);
   padding: var(--space-6);
 }
-.pub-card h3 { margin-bottom: var(--space-2); }
-.agency {
+.paper-card h3 { margin-bottom: var(--space-2); }
+.source {
   display: inline-block;
   padding: var(--space-1) var(--space-2);
   background-color: rgba(0, 229, 255, 0.1);
@@ -75,6 +87,6 @@ const publications = [
   font-weight: 600;
   margin-bottom: var(--space-3);
 }
-.pub-card p { color: var(--text-secondary); margin-bottom: var(--space-4); }
-.pub-link { color: var(--accent-primary); font-weight: 600; }
+.paper-card p { color: var(--text-secondary); margin-bottom: var(--space-4); }
+.paper-link { color: var(--accent-primary); font-weight: 600; }
 </style>
