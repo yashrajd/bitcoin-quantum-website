@@ -178,6 +178,7 @@ Note: `/about` redirects to `/about/project`.
 - Natural language imperative: "Add X", "Remove Y", "Update Z"
 - No conventional commit prefixes (no `feat:`, `fix:`, etc.)
 - Concise, one line, sentence case
+- Optional body: blank line after subject, then bullet points describing the specific changes made
 
 ## Common Tasks
 
