@@ -61,6 +61,8 @@ npm run dev
 
 The site will be available at `http://localhost:5173`
 
+If you add or remove routes or components, update AGENTS.md by running: `node scripts/update-agents-md.js`
+
 ### Build for Production
 
 ```bash

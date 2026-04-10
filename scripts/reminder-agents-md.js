@@ -1,0 +1,1 @@
+console.log('💡 Reminder: If you added/removed routes or components, run: node scripts/update-agents-md.js')

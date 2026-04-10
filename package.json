@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predev": "node scripts/generate-build-info.js",
+    "predev": "node scripts/generate-build-info.js && node scripts/reminder-agents-md.js",
     "dev": "vite",
-    "prebuild": "node scripts/generate-build-info.js",
+    "prebuild": "node scripts/generate-build-info.js && node scripts/reminder-agents-md.js",
     "build": "vite build",
     "preview": "vite preview"
   },

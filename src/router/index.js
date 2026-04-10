@@ -116,6 +116,24 @@ const routes = [
       description: 'Expert predictions and government timelines for quantum threats.'
     }
   },
+  {
+    path: '/learn/timeline/expert-perspectives',
+    name: 'ExpertPerspectives',
+    component: () => import('../pages/learn/ExpertPerspectives.vue'),
+    meta: {
+      title: 'Expert Perspectives - Bitcoin Quantum Hub',
+      description: 'Expert predictions and academic estimates on quantum threats to Bitcoin.'
+    }
+  },
+  {
+    path: '/learn/timeline/government-deadlines',
+    name: 'GovernmentDeadlines',
+    component: () => import('../pages/learn/GovernmentDeadlines.vue'),
+    meta: {
+      title: 'Government Deadlines - Bitcoin Quantum Hub',
+      description: 'Official government timelines for quantum threat preparation.'
+    }
+  },
   
   // ==========================================
   // SOLUTIONS SECTION
