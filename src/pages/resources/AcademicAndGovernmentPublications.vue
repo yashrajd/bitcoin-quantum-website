@@ -15,34 +15,16 @@ const breadcrumbs = [
 
 const papers = [
   {
-    title: 'Navigating the quantum computing threat landscape for blockchains: A comprehensive survey',
-    source: 'ScienceDirect',
-    description: 'Academic survey of quantum threats to blockchain systems, including Bitcoin and Ethereum.',
-    link: 'https://www.sciencedirect.com'
+    title: 'SHRIMPS: 2.5 KB post-quantum signatures across multiple stateful devices',
+    source: 'Blockstream Research',
+    description: 'Extends SHRINCS to support multiple stateful signing devices with the same seed backup, achieving ~2.5 KB signatures on the compact path—about three times smaller than SLH-DSA.',
+    link: 'https://blog.blockstream.com/shrimps-2-5-kb-post-quantum-signatures-across-multiple-stateful-devices/'
   },
   {
-    title: 'Post-Quantum Cryptography Standardization',
-    source: 'NIST',
-    description: 'Official standards and documentation for quantum-resistant cryptographic algorithms.',
-    link: 'https://www.nist.gov'
-  },
-  {
-    title: 'Guidance on Planning for Post-Quantum Cryptography',
-    source: 'CISA',
-    description: 'U.S. government guidance for organizations on preparing for the transition to quantum-resistant cryptography.',
-    link: 'https://www.cisa.gov'
-  },
-  {
-    title: 'Announcing Plans to Transition to Quantum-Resistant Algorithms',
-    source: 'NSA',
-    description: 'The U.S. National Security Agency\'s strategy for moving to quantum-resistant security solutions.',
-    link: 'https://www.nsa.gov'
-  },
-  {
-    title: 'Preparing for Quantum-Safe Cryptography',
-    source: 'UK NCSC',
-    description: 'The UK National Cyber Security Centre\'s recommendations and timelines for quantum risk mitigation.',
-    link: 'https://www.ncsc.gov.uk'
+    title: 'SHRINCS: 324-byte stateful post-quantum signatures with static backups',
+    source: 'Blockstream Research',
+    description: 'Introduces a hybrid hash-based signature scheme combining stateful and stateless approaches to achieve 324-byte post-quantum signatures with a static seed backup fallback for robustness.',
+    link: 'https://blog.blockstream.com/shrincs-324-byte-stateful-post-quantum-signatures-with-static-backups/'
   }
 ]
 </script>

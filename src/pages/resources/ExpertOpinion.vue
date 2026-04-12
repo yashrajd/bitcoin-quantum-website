@@ -21,6 +21,13 @@ const breadcrumbs = [
 
 const opinions = [
   {
+    title: "Bitcoin and the Quantum Problem – Part II: The Quantum Supremacy",
+    source: "Nic Carter",
+    description:
+      "Nic Carter argues the expected value of a CRQC is sufficiently negative for Bitcoin to warrant action today, surveying qubit scaling, investment inflection, government timelines, and the vulnerability of exposed UTXOs.",
+    link: "https://murmurationstwo.substack.com/p/bitcoin-and-the-quantum-problem-part-47f",
+  },
+  {
     title: "Taproot Quantum Spend Paths",
     source: "BitMEX Research",
     description:
