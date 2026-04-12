@@ -15,6 +15,24 @@ const breadcrumbs = [
 
 const papers = [
   {
+    title: 'Safeguarding cryptocurrency by disclosing quantum vulnerabilities responsibly',
+    source: 'Google Research',
+    description: 'Blog post introducing Google\'s whitepaper on quantum vulnerabilities in cryptocurrency. Explores a new responsible disclosure model using zero-knowledge proofs to verify claims without leaking sensitive attack details, and outlines steps for transitioning blockchains to post-quantum cryptography.',
+    link: 'https://research.google/blog/safeguarding-cryptocurrency-by-disclosing-quantum-vulnerabilities-responsibly/'
+  },
+  {
+    title: 'Securing Elliptic Curve Cryptocurrencies against Quantum Vulnerabilities: Resource Estimates and Mitigations',
+    source: 'Google Research',
+    description: 'Provides new resource estimates for breaking 256-bit Elliptic Curve Discrete Logarithm Problem—demonstrating Shor\'s algorithm can execute with fewer than 1,200 logical qubits and 90 million Toffoli gates. Validates results via zero-knowledge proof without disclosing attack vectors, and surveys systemic risks in smart contracts, Proof-of-Stake consensus, and Data Availability Sampling.',
+    link: 'https://arxiv.org/abs/2603.28846'
+  },
+  {
+    title: 'Hash-based Signature Schemes for Bitcoin',
+    source: 'Blockstream Research',
+    description: 'Comprehensive overview of hash-based signature schemes for Bitcoin, investigating parameter selection tailored to Bitcoin\'s requirements. Achieves significant size improvements over standardized SPHINCS+ by applying recent optimizations and reducing allowed signatures per public key.',
+    link: 'https://eprint.iacr.org/2025/2203'
+  },
+  {
     title: 'SHRIMPS: 2.5 KB post-quantum signatures across multiple stateful devices',
     source: 'Blockstream Research',
     description: 'Extends SHRINCS to support multiple stateful signing devices with the same seed backup, achieving ~2.5 KB signatures on the compact path—about three times smaller than SLH-DSA.',
