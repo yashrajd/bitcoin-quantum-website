@@ -31,6 +31,18 @@ const docs = [
     type: 'Repository',
     description: 'The official repository for all Bitcoin Improvement Proposals.',
     link: 'https://github.com/bitcoin/bips'
+  },
+  {
+    title: 'BIP-361: Post Quantum Migration and Legacy Signature Sunset',
+    type: 'BIP',
+    description: 'Proposes a three-phase migration: disallowing sends to vulnerable addresses, sunsetting ECDSA/Schnorr signatures via flag day, and enabling quantum-safe recovery of legacy UTXOs via zero-knowledge proofs.',
+    link: 'https://github.com/bitcoin/bips/blob/master/bip-0361.mediawiki'
+  },
+  {
+    title: 'Quantum Safe Bitcoin (QSB)',
+    type: 'Repository',
+    description: 'Working implementation of quantum-safe Bitcoin transactions using only existing consensus rules—no soft fork required. Security rests on hash pre-image resistance rather than elliptic curve assumptions.',
+    link: 'https://github.com/avihu28/Quantum-Safe-Bitcoin-Transactions/'
   }
 ]
 </script>

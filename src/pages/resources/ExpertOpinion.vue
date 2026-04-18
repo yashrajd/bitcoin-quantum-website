@@ -48,6 +48,27 @@ const opinions = [
       "UT Austin quantum computing researcher examines two April 2026 results — lower fault-tolerance overhead (Caltech) and a reduced-qubit Shor's circuit (Google) — and their implications for cryptographic timelines.",
     link: "https://scottaaronson.blog/?p=9665",
   },
+  {
+    title: "I Spent 200 Hours Reading Quantum Computing Papers So You Don't Have To. Bitcoin Is Fine.",
+    source: "NVK",
+    description:
+      "Debunks quantum FUD around Bitcoin, explaining why the threat is overhyped while identifying the real concern: roughly 6.26 million BTC with exposed public keys.",
+    link: "https://bitcoinquantum.space/part1/",
+  },
+  {
+    title: "I Went Deeper Down the Quantum Rabbit Hole. The Industry Is Full of Shit.",
+    source: "NVK",
+    description:
+      "Exposes the quantum computing industry's financial incentives and failed timelines, while arguing Bitcoin should still upgrade its cryptography for defense-in-depth.",
+    link: "https://bitcoinquantum.space/part2/",
+  },
+  {
+    title: "I Read Every Bitcoin Quantum Proposal. Here's Where We Actually Are.",
+    source: "NVK",
+    description:
+      "Surveys all fourteen post-quantum proposals for Bitcoin, mapping developer positions, cryptographic gaps, and the governance bottleneck.",
+    link: "https://bitcoinquantum.space/part3/",
+  },
 ];
 </script>
 

@@ -43,6 +43,24 @@ const papers = [
     source: 'Blockstream Research',
     description: 'Introduces a hybrid hash-based signature scheme combining stateful and stateless approaches to achieve 324-byte post-quantum signatures with a static seed backup fallback for robustness.',
     link: 'https://blog.blockstream.com/shrincs-324-byte-stateful-post-quantum-signatures-with-static-backups/'
+  },
+  {
+    title: 'Bitcoin\'s Quantum Readiness: Exposure, Mitigations, and Upgrade Paths',
+    source: 'Presidio Bitcoin',
+    description: 'Institutional analysis of Bitcoin\'s quantum exposure, vulnerability of exposed UTXOs, mitigation strategies, orderly and rapid-response transition scenarios, and migration capacity estimates.',
+    link: 'https://github.com/presidiobtc/bitcoin-quantum'
+  },
+  {
+    title: 'Bitcoin and Quantum Computing: Current Status and Future Directions',
+    source: 'Chaincode Labs',
+    description: 'Comprehensive report on Bitcoin\'s post-quantum future, covering quantum computing\'s impact on mining, signature schemes, and migration pathways.',
+    link: 'https://chaincode.com/bitcoin-post-quantum.pdf'
+  },
+  {
+    title: 'Bitcoin\'s CRQC Response Playbook',
+    source: 'Anthony Milton & Clara Shikhelman',
+    description: 'Concrete rapid-response plan for how Bitcoin can reach quantum resistance if cryptographically relevant quantum computers emerge sooner than expected.',
+    link: 'https://pq-bitcoin.org/posts/bitcoins-crqc-response'
   }
 ]
 </script>

@@ -19,7 +19,10 @@ const links = [
   ]},
   { category: 'Research', items: [
     { name: 'NIST PQC', url: 'https://csrc.nist.gov/projects/post-quantum-cryptography', desc: 'Post-Quantum Cryptography standardization' },
-    { name: 'arXiv Quantum Physics', url: 'https://arxiv.org/list/quant-ph/recent', desc: 'Latest quantum computing research papers' }
+    { name: 'arXiv Quantum Physics', url: 'https://arxiv.org/list/quant-ph/recent', desc: 'Latest quantum computing research papers' },
+    { name: 'Post-Quantum Bitcoin', url: 'https://pq-bitcoin.org/', desc: 'Research blog on Bitcoin\'s quantum vulnerability and CRQC response planning by Anthony Milton & Clara Shikhelman' },
+    { name: 'Bitcoin & Quantum Computing', url: 'https://bitcoinquantum.space/', desc: 'Three-part research series examining quantum computing\'s impact on Bitcoin by NVK (Coinkite)' },
+    { name: 'Bitcoin Post-Quantum Work Tracker', url: 'https://gist.github.com/Roasbeef/563f173fe44e2005e003a082716e586f', desc: 'Living index of active post-quantum developer work, proposals, and discussions, maintained by Olaoluwa Osuntokun (roasbeef)' }
   ]}
 ]
 </script>
