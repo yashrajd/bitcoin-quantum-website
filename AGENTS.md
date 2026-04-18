@@ -50,7 +50,7 @@ src/
 ├── pages/               # Route-level components (organized by section)
 ├── router/              # index.js — all routes + nav guards
 ├── styles/              # variables.css (theme system + global styles)
-└── utils/               # logger.js
+└── utils/               # date.js, logger.js
 
 public/images/           # Static images
 scripts/                 # generate-build-info.js, build-and-preview.sh, update-agents-md.js, reminder-agents-md.js
@@ -138,11 +138,12 @@ Note: `/about` redirects to `/about/project`.
 
 - Export: `newsItems` const array
 - Fields per item:
-  - `date` — Display string, e.g. `'January 2026'`
+  - `date` — ISO date string `'YYYY-MM-DD'`
   - `title` — News headline
   - `excerpt` — Brief summary
-  - `link` — Router path (e.g. `'/news/nist-standards'`)
-- Helpers: `getLatestNews(count?)` returns sorted items (newest first). `getAllNews()` returns all sorted.
+  - `link` — Router path (e.g. `'/news/nist-standings'`)
+- `displayDate` is computed by `getLatestNews()` using `formatDate()` from `src/utils/date.js`, producing format like `'Feb 3, 2026'`
+- Helpers: `getLatestNews(count?)` returns sorted items (newest first) with `displayDate` property added. `getAllNews()` returns all sorted.
 - Items are sorted by date internally; display order in templates uses these helpers.
 
 ### Media Items (`src/content/media.js`)

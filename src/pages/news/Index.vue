@@ -26,7 +26,7 @@ const news = getAllNews()
     
     <div class="news-list">
       <article v-for="item in news" :key="item.title" class="news-item">
-        <time :datetime="item.date">{{ item.date }}</time>
+        <time :datetime="item.date">{{ item.displayDate }}</time>
         <h3>
           <router-link :to="item.link">{{ item.title }}</router-link>
         </h3>

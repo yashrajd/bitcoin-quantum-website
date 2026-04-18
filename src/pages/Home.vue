@@ -187,7 +187,7 @@ const updates = getLatestNews(3)
             :key="update.link"
             class="update-card"
           >
-            <time class="update-date" :datetime="update.date">{{ update.date }}</time>
+            <time class="update-date" :datetime="update.date">{{ update.displayDate }}</time>
             <h3 class="update-title">
               <router-link :to="update.link">{{ update.title }}</router-link>
             </h3>

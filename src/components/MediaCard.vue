@@ -1,5 +1,6 @@
 <script setup>
 import { computed } from 'vue'
+import { formatDate } from '../utils/date.js'
 
 const props = defineProps({
   title: {
@@ -66,14 +67,7 @@ const thumbnailSrc = computed(() => {
   return '/images/media-placeholder.svg'
 })
 
-const formattedDate = computed(() => {
-  const date = new Date(props.date)
-  return date.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric'
-  })
-})
+const formattedDate = computed(() => formatDate(props.date))
 </script>
 
 <template>
@@ -149,13 +143,15 @@ const formattedDate = computed(() => {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
   margin-bottom: var(--space-3);
 }
 
 .media-date {
   font-family: var(--font-family-mono);
   font-size: var(--text-xs);
-  color: var(--text-muted);
+  color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -163,7 +159,7 @@ const formattedDate = computed(() => {
 .source-badge {
   padding: var(--space-1) var(--space-2);
   background-color: var(--bg-tertiary);
-  color: var(--text-muted);
+  color: var(--text-secondary);
   border-radius: 4px;
   font-family: var(--font-family-mono);
   font-size: var(--text-xs);
