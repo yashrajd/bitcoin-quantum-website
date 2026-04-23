@@ -79,6 +79,14 @@ const opinions = [
       "Surveys all fourteen post-quantum proposals for Bitcoin, mapping developer positions, cryptographic gaps, and the governance bottleneck.",
     link: "https://bitcoinquantum.space/part3/",
   },
+  {
+    title: "The case for freezing quantum vulnerable coins",
+    source: "Ben Carman",
+    date: "2026-04-22",
+    description:
+      "Game-theory argument that quantum-vulnerable coins break mining incentives: labs that can break keys would partner with miners, creating permanent reorg incentives and chain-split risk that undermines Bitcoin's finality guarantees.",
+    link: "https://stacker.news/items/1476783",
+  },
 ];
 
 const sortedOpinions = computed(() =>
