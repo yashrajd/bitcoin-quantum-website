@@ -24,6 +24,14 @@ const breadcrumbs = [
 
 const opinions = [
   {
+    title: "PACTs: Protecting Your Bitcoin From a Quantum Sunset",
+    source: "Dan Robinson / Paradigm",
+    date: "2026-05-01",
+    description:
+      "Proposes a way for Bitcoin holders to silently timestamp proof of address control (PACTs) so they can reclaim coins after a quantum sunset without publicly moving funds, preserving privacy for dormant holders including Satoshi.",
+    link: "https://www.paradigm.xyz/2026/05/pacts-protecting-your-bitcoin-from-a-quantum-sunset",
+  },
+  {
     title: "Bitcoin and the Quantum Problem – Part II: The Quantum Supremacy",
     source: "Nic Carter",
     date: "2025-11-26",
