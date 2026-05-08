@@ -31,6 +31,10 @@ const breadcrumbs = [
       <li>SegWit witness integration</li>
     </ul>
     
+    <h2>Taproot Script-Path Foundation</h2>
+    <p>Taproot's script-path architecture can serve as the foundation for a dual quantum-safe / quantum-vulnerable spend model, minimizing disruption ahead of Q-day. As analyzed by BitMEX Research, this enables a two-phase migration where the script-path remains secure even if the key-path is later disabled.</p>
+    <p><a href="https://www.bitmex.com/blog/Taproot-Quantum-Spend-Paths" target="_blank" rel="noopener noreferrer">BitMEX Research: Taproot Quantum Spend Paths</a></p>
+
     <router-link to="/bip-360" class="btn btn-primary">Visit Full BIP-360 Hub</router-link>
   </PageContainer>
 </template>
@@ -53,4 +57,5 @@ li { margin-bottom: var(--space-2); }
   margin-top: var(--space-6);
 }
 .btn:hover { filter: brightness(1.1); text-decoration: none; }
+a { color: var(--accent-primary); font-weight: 600; }
 </style>
