@@ -21,7 +21,7 @@ const breadcrumbs = [
     
     <h1>BIP-360 Overview</h1>
     
-    <p class="lead">BIP-360 introduces a new output type called "Pay-to-Tapscript-Hash (P2TSH)" designed specifically to mitigate quantum risks.</p>
+    <p class="lead">BIP-360 introduces a new output type called "Pay-to-Merkle-Root (P2MR)" designed specifically to mitigate quantum risks.</p>
     
     <h2>Key Features</h2>
     <ul>

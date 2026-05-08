@@ -26,7 +26,7 @@ const proposals = [
     title: 'BIP-360: Pay to Quantum Resistant Hash',
     link: '/bip-360',
     badge: 'Draft',
-    description: 'Introduces P2TSH (Pay-to-Tapscript-Hash) output type to mitigate quantum risks by removing key-path spends from Taproot addresses.',
+    description: 'Introduces P2MR (Pay-to-Merkle-Root) output type to mitigate quantum risks by removing key-path spends from Taproot addresses.',
     linkText: 'Learn more →'
   },
   {
