@@ -83,6 +83,7 @@ index.html               # HTML shell with CSP meta tag
 | `/solutions/post-quantum-cryptography/hybrid` | HybridModels | `src/pages/solutions/HybridModels.vue` |
 | `/solutions/bitcoin-proposals` | BitcoinProposals | `src/pages/solutions/BitcoinProposals.vue` |
 | `/solutions/bitcoin-proposals/bip-360` | BIP360Brief | `src/pages/solutions/BIP360Brief.vue` |
+| `/solutions/bitcoin-proposals/bip-361` | BIP361Brief | `src/pages/solutions/BIP361Brief.vue` |
 | `/solutions/bitcoin-proposals/bip-347` | BIP347 | `src/pages/solutions/BIP347.vue` |
 | `/solutions/bitcoin-proposals/other` | OtherProposals | `src/pages/solutions/OtherProposals.vue` |
 | `/solutions/migration` | Migration | `src/pages/solutions/Migration.vue` |
