@@ -2,6 +2,8 @@
 import { useHead } from '@vueuse/head'
 import PageContainer from '../../components/PageContainer.vue'
 import Breadcrumbs from '../../components/Breadcrumbs.vue'
+import NavigationCard from '../../components/NavigationCard.vue'
+
 useHead({
   title: 'BIP-360 Brief - Bitcoin Quantum Hub',
   meta: [{ name: 'description', content: 'Summary of Bitcoin Improvement Proposal 360 for quantum resistance.' }]
@@ -12,6 +14,30 @@ const breadcrumbs = [
   { label: 'Solutions', path: '/solutions' },
   { label: 'Bitcoin Proposals', path: '/solutions/bitcoin-proposals' },
   { label: 'BIP-360' }
+]
+
+const relatedResources = [
+  {
+    title: 'BIP-361: Migration and Legacy Sunset',
+    link: '/solutions/bitcoin-proposals/bip-361',
+    description: 'Three-phase migration path and legacy-coin policy to reach quantum resistance.',
+    linkText: 'Learn more →',
+    layout: 'list'
+  },
+  {
+    title: 'BIP-347: OP_CAT for Lamport Signatures',
+    link: '/solutions/bitcoin-proposals/bip-347',
+    description: 'How OP_CAT enables quantum-resistant Lamport signatures in Bitcoin Script.',
+    linkText: 'Learn more →',
+    layout: 'list'
+  },
+  {
+    title: 'Other Proposals: QSB, PQC Precommitment, and more',
+    link: '/solutions/bitcoin-proposals/other',
+    description: 'Additional research-stage proposals for Bitcoin quantum resistance.',
+    linkText: 'Learn more →',
+    layout: 'list'
+  }
 ]
 </script>
 
@@ -36,6 +62,15 @@ const breadcrumbs = [
     <p><a href="https://www.bitmex.com/blog/Taproot-Quantum-Spend-Paths" target="_blank" rel="noopener noreferrer">BitMEX Research: Taproot Quantum Spend Paths</a></p>
 
     <router-link to="/bip-360" class="btn btn-primary">Visit Full BIP-360 Hub</router-link>
+
+    <h2>Related Resources</h2>
+    <div class="related-resources">
+      <NavigationCard
+        v-for="resource in relatedResources"
+        :key="resource.link"
+        v-bind="resource"
+      />
+    </div>
   </PageContainer>
 </template>
 
@@ -58,4 +93,9 @@ li { margin-bottom: var(--space-2); }
 }
 .btn:hover { filter: brightness(1.1); text-decoration: none; }
 a { color: var(--accent-primary); font-weight: 600; }
+.related-resources {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
 </style>
