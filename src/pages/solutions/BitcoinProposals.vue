@@ -37,6 +37,13 @@ const proposals = [
     linkText: 'Learn more →'
   },
   {
+    title: 'BIP-361: Post Quantum Migration and Legacy Signature Sunset',
+    link: '/solutions/bitcoin-proposals/bip-361',
+    badge: 'Draft',
+    description: 'Proposes a three-phase migration: disallowing sends to vulnerable addresses, sunsetting ECDSA/Schnorr via flag day, and enabling quantum-safe recovery of legacy UTXOs via zero-knowledge proofs.',
+    linkText: 'Learn more →'
+  },
+  {
     title: 'Other: Additional Proposals',
     link: '/solutions/bitcoin-proposals/other',
     badge: 'Research',
