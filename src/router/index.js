@@ -202,6 +202,15 @@ const routes = [
     }
   },
   {
+    path: '/solutions/bitcoin-proposals/bip-361',
+    name: 'BIP361Brief',
+    component: () => import('../pages/solutions/BIP361Brief.vue'),
+    meta: {
+      title: 'BIP-361 Overview - Bitcoin Quantum Hub',
+      description: 'Summary of Bitcoin Improvement Proposal 361 for post-quantum migration and legacy signature sunset.'
+    }
+  },
+  {
     path: '/solutions/bitcoin-proposals/bip-347',
     name: 'BIP347',
     component: () => import('../pages/solutions/BIP347.vue'),
